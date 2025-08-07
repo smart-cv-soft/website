@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart-Cv-Soft - Intelligent CV Manager for Recruitment Agencies</title>
+    <meta name="description" content="Smart-Cv-Soft is an intelligent curriculum vitae management system that revolutionizes recruitment with AI. Analyze, translate, and optimize CVs in just a few clicks.">
+    <meta name="keywords" content="curriculum vitae management system, smart curriculum vitae system, intelligent CV manager, AI recruitment software, automatic CV analysis">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D7788',
+                        secondary: '#17A2B8',
+                        accent: '#38b44A',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #2D7788 0%, #17A2B8 50%, #38b44A 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+
+            .testimonial-card:hover {
+                transform: scale(1.02);
+            }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+    </style>
+</head>
+<body class="font-sans bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo ---------------------------------------------------- -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="images/logo13.png" width="60" height="60" />
+                        <span class="text-primary font-bold text-xl ml-2">Smart-Cv-Soft</span>
+                    </div>
+                </div>
+
+                <!-- Main links (desktop) ------------------------------ -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Features</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Pricing</a>
+                    <a href="#demo" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Demo</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Testimonials</a>
+                    <a href="#contact" class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-secondary transition duration-300">Contact Us</a>
+
+                    <!-- Language selector (flags) ----------------------- -->
+                    <div class="flex items-center space-x-2 ml-4">
+                        <!-- French -->
+                        <a href="prix.html" title="French">
+                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="40" fill="#0055A4" />
+                                <rect x="20" width="20" height="40" fill="#FFF" />
+                                <rect x="40" width="20" height="40" fill="#EF4135" />
+                            </svg>
+                        </a>
+
+                        <!-- English -->
+                        <a href="pricing.html" title="English">
+                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="60" height="40" fill="#012169" />
+                                <polygon points="0,0 60,40 60,0 0,40" fill="#FFF" />
+                                <polygon points="0,0 60,0 60,40 0,40" fill="#C8102E" opacity=".6" />
+                                <rect x="25" width="10" height="40" fill="#FFF" />
+                                <rect y="15" width="60" height="10" fill="#FFF" />
+                                <rect x="27.5" width="5" height="40" fill="#C8102E" />
+                                <rect y="17.5" width="60" height="5" fill="#C8102E" />
+                            </svg>
+                        </a>
+
+                        <!-- Spanish -->
+                        <a href="precios.html" title="Spanish">
+                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="60" height="40" fill="#AA151B" />
+                                <rect y="13.33" width="60" height="13.33" fill="#F1BF00" />
+                            </svg>
+                        </a>
+
+                        <!-- German -->
+                        <a href="preisgestaltung.html" title="German">
+                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="60" height="13.33" fill="#000" />
+                                <rect y="13.33" width="60" height="13.33" fill="#DD0000" />
+                                <rect y="26.67" width="60" height="13.33" fill="#FFCE00" />
+                            </svg>
+                        </a>
+
+                        <!-- Italian -->
+                        <a href="prezzi.html" title="Italian">
+                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="40" fill="#009246" />
+                                <rect x="20" width="20" height="40" fill="#FFF" />
+                                <rect x="40" width="20" height="40" fill="#CE2B37" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Burger button (mobile) ---------------------------------- -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu ------------------------------------------------ -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-2">
+            <a href="#features" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Features</a>
+            <a href="#pricing" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Pricing</a>
+            <a href="#demo" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Demo</a>
+            <a href="#testimonials" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Testimonials</a>
+            <a href="#contact" class="block bg-primary text-white px-3 py-2 rounded-md text-base font-medium mt-2">Contact Us</a>
+
+            <!-- Language selector (mobile) ---------------------------- -->
+            <div class="flex items-center space-x-4 px-3 pt-4">
+                <a href="prix.html" title="French">
+                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="20" height="40" fill="#0055A4" />
+                        <rect x="20" width="20" height="40" fill="#FFF" />
+                        <rect x="40" width="20" height="40" fill="#EF4135" />
+                    </svg>
+                </a>
+                <a href="pricing.html" title="English">
+                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="60" height="40" fill="#012169" />
+                        <polygon points="0,0 60,40 60,0 0,40" fill="#FFF" />
+                        <polygon points="0,0 60,0 60,40 0,40" fill="#C8102E" opacity=".6" />
+                        <rect x="25" width="10" height="40" fill="#FFF" />
+                        <rect y="15" width="60" height="10" fill="#FFF" />
+                        <rect x="27.5" width="5" height="40" fill="#C8102E" />
+                        <rect y="17.5" width="60" height="5" fill="#C8102E" />
+                    </svg>
+                </a>
+                <a href="precios.html" title="Spanish">
+                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="60" height="40" fill="#AA151B" />
+                        <rect y="13.33" width="60" height="13.33" fill="#F1BF00" />
+                    </svg>
+                </a>
+                <a href="preisgestaltung.html" title="German">
+                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="60" height="13.33" fill="#000" />
+                        <rect y="13.33" width="60" height="13.33" fill="#DD0000" />
+                        <rect y="26.67" width="60" height="13.33" fill="#FFCE00" />
+                    </svg>
+                </a>
+                <a href="prezzi.html" title="Italian">
+                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="20" height="40" fill="#009246" />
+                        <rect x="20" width="20" height="40" fill="#FFF" />
+                        <rect x="40" width="20" height="40" fill="#CE2B37" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Revolutionize Your Recruitment with Smart-Cv-Soft</h1>
+                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">AI for recruitment agencies to analyze, optimize, translate CVs, and print them in your company's format in one click.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#demo" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300 text-center">Watch the Demo</a>
+                    <a href="#pricing" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 text-center">Our Plans</a>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<!-- Demo Section -->
+    <section id="demo" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <h2 class="text-3xl font-bold text-primary mb-6">See Smart-Cv-Soft in Action</h2>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Simple Setup</h3>
+                                <p class="text-gray-600">Quick setup with no technical complications.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-bold text-gray-800">No Technical Skills Required</h3>
+                                <p class="text-gray-600">An intuitive interface accessible to all your colleagues.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Great User Experience</h3>
+                                <p class="text-gray-600">Designed for recruitment professionals.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="bg-primary text-white py-3 px-6 rounded-lg hover:bg-secondary transition duration-300 inline-block">Watch Feature Videos</a>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="video-container rounded-lg shadow-xl overflow-hidden">
+                        <iframe src="https://www.youtube.com/embed/8X5UwVNHp9Q?si=XcNt3IRohMEDSl5y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Discover the Benefits</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
+                    <div class="text-accent mb-4">
+                        <i class="fas fa-robot text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">AI-Powered Application</h3>
+                    <p class="text-gray-600">Our fast, powerful, and robust algorithms provide relevant CV analysis to instantly identify each candidate's key skills.</p>
+                </div>
+
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
+                    <div class="text-accent mb-4">
+                        <i class="fas fa-clock text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Drastic Time Savings</h3>
+                    <p class="text-gray-600">All actions are done in two clicks: importing CVs, extracting data, translating, optimizing, and printing in Word format with your company's template.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
+                    <div class="text-accent mb-4">
+                        <i class="fas fa-chart-line text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Analytical Statistics</h3>
+                    <p class="text-gray-600">A comprehensive dashboard with statistics on your candidates for informed decision-making and better management of your talent pool.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
+                    <div class="text-accent mb-4">
+                        <i class="fas fa-language text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Multilingual Translation</h3>
+                    <p class="text-gray-600">Instant translation of CVs into English, French, Italian, German, and Spanish to facilitate international recruitment.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
+                    <div class="text-accent mb-4">
+                        <i class="fas fa-palette text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Customization</h3>
+                    <p class="text-gray-600">Integrate your own CV and job ad template to enhance your visual identity and professionalize your client submissions.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
+                    <div class="text-accent mb-4">
+                        <i class="fas fa-lock text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Enhanced Security</h3>
+                    <p class="text-gray-600">Your data is protected by the latest security standards, with encryption and automatic backups for complete peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-primary mb-12">Our Plans Tailored to Your Needs</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Plan 1 -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
+                <div class="bg-secondary text-white px-6 py-4">
+                    <h3 class="text-xl font-bold">Small Business</h3>
+                    <p class="text-white opacity-90">Perfect for small teams</p>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="text-3xl font-bold text-gray-800 mb-4">€249 <span class="text-lg font-normal text-gray-600">/month</span></div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> <strong>10</strong> users</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> <strong>1</strong> shared access to AI features</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Integration of your company's Word CV template</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Unlimited printing of CVs in Word format</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Free AI processing for the first <strong>100</strong> CVs</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Free AI processing for the first <strong>100</strong> job ads</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> <strong>€0.75</strong> per additional AI CV processing (upload, translation, optimization for a job offer)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> <strong>€0.75</strong> per additional AI job processing (job description upload)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-6 pt-0 text-center">
+                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Plan 2 -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
+                <div class="bg-secondary text-white px-6 py-4">
+                    <h3 class="text-xl font-bold">Medium Business</h3>
+                    <p class="text-white opacity-90">Perfect for medium-sized teams</p>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="text-3xl font-bold text-gray-800 mb-4">€299 <span class="text-lg font-normal text-gray-600">/month</span></div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> <strong>20</strong> users</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> <strong>1</strong> shared access to AI features</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Integration of your company's Word CV template</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Unlimited printing of CVs in Word format</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Free AI processing for the first <strong>150</strong> CVs</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Free AI processing for the first <strong>150</strong> job ads</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> Creation of <strong>50</strong> AI-generated technical quizzes for job offers. Applicants can take the quiz online and receive a score.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> <strong>€0.75</strong> per additional AI CV processing (upload, translation, optimization)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> <strong>€0.75</strong> per additional AI job processing (job description upload)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> <strong>€2</strong> per additional AI Quiz creation</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-6 pt-0 text-center">
+                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Contact Us</a>
+                </div>
+            </div>
+            
+            <!-- Plan 3 -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
+                <div class="bg-secondary text-white px-6 py-4">
+                    <h3 class="text-xl font-bold">Advanced Business</h3>
+                    <p class="text-white opacity-90">Ideal for larger teams</p>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="text-3xl font-bold text-gray-800 mb-4">€599 <span class="text-lg font-normal text-gray-600">/month</span></div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> <strong>30</strong> users</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> <strong>1</strong> shared access to AI features</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Integration of your company's Word CV template</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Unlimited printing of CVs in Word format</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                             <span> Creation of <strong>100</strong> AI-generated technical quizzes for job offers. Applicants can take the quiz online and receive a score.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Free AI processing for the first <strong>400</strong> CVs</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Free AI processing for the first <strong>400</strong> job ads</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> <strong>€0.5</strong> per additional AI CV processing (upload, translation, optimization for a job offer)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> <strong>€0.5</strong> per additional AI job processing (job description upload)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span> <strong>€1.5</strong> per additional AI Quiz creation</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-6 pt-0 text-center">
+                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Plan 4 -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
+                <div class="bg-primary text-white px-6 py-4">
+                    <h3 class="text-xl font-bold">Integration into Your CRM</h3>
+                    <p class="text-white opacity-90">Ideal for companies wanting to integrate these features into their CRM</p>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="text-3xl font-bold text-gray-800 mb-4">Free Integration with Commitment</div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Contacting CRM provider and validating feasibility</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>API integrations into the CRM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Creation of custom complementary API services</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Technical assistance for developers</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Documentation deliverables</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-6 pt-0 text-center">
+                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Plan 5 -->
+            <div id="automaticImport" class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
+                <div class="bg-primary text-white px-6 py-4">
+                    <h3 class="text-xl font-bold">Automatic Fast Batch Import</h3>
+                    <p class="text-white opacity-90">Migration of your existing data</p>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="text-3xl font-bold text-gray-800 mb-4">From €1 / CV</div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>1-100 CVs: €1/CV</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>101-200 CVs: €0.75 per additional CV</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>201+ CVs: €0.75 per additional CV</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Import of existing ads</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Data quality check</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-6 pt-0 text-center">
+                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Plan 6 -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
+                <div class="bg-primary text-white px-6 py-4">
+                    <h3 class="text-xl font-bold">Special Requests</h3>
+                    <p class="text-white opacity-90">Custom solutions for your business</p>
+                </div>
+                <div class="p-6 flex-grow">
+                    <div class="text-3xl font-bold text-gray-800 mb-4">By Quote</div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Specific integrations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Custom features</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Specific API connectors</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Additional modules</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-accent mr-2"></i>
+                            <span>Personalized training</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-6 pt-0 text-center">
+                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">What Our Clients Say</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">JD</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Jean Dupont</h4>
+                            <p class="text-gray-600">CEO, Talent Solutions</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-700 italic">
+                        "Smart-Cv-Soft has transformed the way we work. What used to take us hours is now done in minutes. The automatic skills analysis is particularly impressive."
+                    </div>
+                    <div class="mt-4 text-accent">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white font-bold mr-4">MD</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Michel Delouya</h4>
+                            <p class="text-gray-600">Director, AMD Blue</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-700 italic">
+                        "The multilingual translation feature has allowed us to expand our business internationally without having to hire translators. A considerable saving of time and money."
+                    </div>
+                    <div class="mt-4 text-accent">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-bold mr-4">TP</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Thomas Petit</h4>
+                            <p class="text-gray-600">HR Manager, TechRecruit</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-700 italic">
+                        "The optimization of CVs for specific positions is revolutionary. Our client response rates have increased by 40% since we started using Smart-Cv-Soft."
+                    </div>
+                    <div class="mt-4 text-accent">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to revolutionize your recruitment process?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Try Smart-Cv-Soft free for 14 days and discover how we can optimize your workflow.</p>
+            <a href="#contact" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300 inline-block">Request a Demo</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary">Contact Us</h2>
+                <p class="text-gray-600 mt-2">Our experts are available to answer all your questions.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                     <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
+                            <input type="text" id="company" name="company" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded hover:bg-secondary transition duration-300">Send Message</button>
+                        </div>
+                    </form>  
+                    <br/><img src="images/desk.png" width="500" height="350" />
+                </div>
+                <div>
+                    <div class="bg-gray-50 p-6 rounded-lg h-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Our Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-secondary text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Address</h4>
+                                    <p class="text-gray-600">38 rue de Paris, 93260 Les Lilas, France</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt text-secondary text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Phone</h4>
+                                    <p class="text-gray-600">+33 1 23 45 67 89</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-secondary text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Email</h4>
+                                    <p class="text-gray-600">smartCV.soft@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-secondary text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Opening Hours</h4>
+                                    <p class="text-gray-600">Monday-Friday: 9am-6pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="font-medium text-gray-800 mb-3">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-600 hover:text-primary transition duration-300">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-primary transition duration-300">
+                                    <i class="fab fa-twitter text-xl"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-primary transition duration-300">
+                                    <i class="fab fa-facebook-f text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="images/logo13.png" width="40" height="40" />
+                        <span class="text-xl font-bold"> Smart-Cv-Soft</span>
+                    </div>
+                    <p class="text-gray-400">The intelligent tool for recruitment agencies that want to boost efficiency and performance.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition duration-300">Features</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition duration-300">Pricing</a></li>
+                        <li><a href="#demo" class="text-gray-400 hover:text-white transition duration-300">Demo</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition duration-300">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms and Conditions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Legal Notice</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">T&Cs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to receive our latest news and special offers.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 text-gray-800 rounded-l focus:outline-none w-full">
+                        <button type="submit" class="bg-accent px-4 py-2 rounded-r hover:bg-green-600 transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 Smart-Cv-Soft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
+                        document.getElementById('mobile-menu').classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission handling
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Here you would typically send the form data to your server
+                // For this example, we'll just show an alert
+                alert('Thank you for your message! We will contact you soon.');
+
+                // Reset form
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
