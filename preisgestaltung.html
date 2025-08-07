@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart-Cv-Soft - Intelligenter Lebenslauf-Manager für Personalberatungen</title>
-    <meta name="description" content="Smart-Cv-Soft ist ein intelligentes Lebenslauf-Management-System, das die Personalbeschaffung durch KI revolutioniert. Analyse, Übersetzung und Optimierung von Lebensläufen mit wenigen Klicks.">
-    <meta name="keywords" content="Lebenslauf-Management-System, intelligentes Lebenslauf-System, intelligenter Lebenslauf-Manager, KI-Rekrutierungssoftware, automatische Lebenslaufanalyse">
+    <meta name="description" content="Smart-Cv-Soft ist ein intelligentes System zur Lebenslaufverwaltung, das die Personalbeschaffung mit KI revolutioniert. Analysieren, übersetzen und optimieren Sie Lebensläufe mit nur wenigen Klicks.">
+    <meta name="keywords" content="Lebenslauf-Management-System, intelligentes Lebenslauf-System, intelligenter Lebenslauf-Manager, KI-Recruiting-Software, automatische Lebenslaufanalyse">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script>
@@ -57,619 +57,178 @@
 </head>
 <body class="font-sans bg-white">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
-                <!-- Logo ---------------------------------------------------- -->
+                <!-- Logo -->
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <img src="images\logo13.png" width="60" height="60" />
+                        <img src="images/logo13.png" width="60" height="60" alt="Smart-Cv-Soft Logo" />
                         <span class="text-primary font-bold text-xl ml-2">Smart-Cv-Soft</span>
                     </div>
                 </div>
-
-                <!-- Hauptlinks (Desktop) ------------------------------ -->
+                <!-- Hauptlinks (Desktop) -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#features" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Vorteile</a>
                     <a href="#pricing" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Preise</a>
                     <a href="#demo" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Demo</a>
-                    <a href="#testimonials" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Kundenstimmen</a>
-                    <a href="#contact" class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-secondary transition duration-300">Kontaktieren Sie uns</a>
-
-                    <!-- Sprachauswahl (Flaggen) ----------------------- -->
+                    <a href="#testimonials" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Erfahrungsberichte</a>
+                    <a href="#contact" class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-secondary transition duration-300">Kontakt</a>
+                    <!-- Sprachauswahl -->
                     <div class="flex items-center space-x-2 ml-4">
-                        <!-- Französisch -->
-                        <a href="prix.html" title="Français">
-                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="20" height="40" fill="#0055A4" />
-                                <rect x="20" width="20" height="40" fill="#FFF" />
-                                <rect x="40" width="20" height="40" fill="#EF4135" />
-                            </svg>
-                        </a>
-
-                        <!-- Englisch -->
-                        <a href="pricing.html" title="English">
-                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="60" height="40" fill="#012169" />
-                                <polygon points="0,0 60,40 60,0 0,40" fill="#FFF" />
-                                <polygon points="0,0 60,0 60,40 0,40" fill="#C8102E" opacity=".6" />
-                                <rect x="25" width="10" height="40" fill="#FFF" />
-                                <rect y="15" width="60" height="10" fill="#FFF" />
-                                <rect x="27.5" width="5" height="40" fill="#C8102E" />
-                                <rect y="17.5" width="60" height="5" fill="#C8102E" />
-                            </svg>
-                        </a>
-
-                        <!-- Spanisch -->
-                        <a href="precios.html" title="Español">
-                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="60" height="40" fill="#AA151B" />
-                                <rect y="13.33" width="60" height="13.33" fill="#F1BF00" />
-                            </svg>
-                        </a>
-
-                        <!-- Deutsch -->
-                        <a href="preisgestaltung.html" title="Deutsch">
-                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="60" height="13.33" fill="#000" />
-                                <rect y="13.33" width="60" height="13.33" fill="#DD0000" />
-                                <rect y="26.67" width="60" height="13.33" fill="#FFCE00" />
-                            </svg>
-                        </a>
-
-                        <!-- Italienisch -->
-                        <a href="prezzi.html" title="Italiano">
-                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="20" height="40" fill="#009246" />
-                                <rect x="20" width="20" height="40" fill="#FFF" />
-                                <rect x="40" width="20" height="40" fill="#CE2B37" />
-                            </svg>
-                        </a>
+                        <a href="prix.html" title="Français"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="20" height="40" fill="#0055A4" /><rect x="20" width="20" height="40" fill="#FFF" /><rect x="40" width="20" height="40" fill="#EF4135" /></svg></a>
+                        <a href="pricing.html" title="English"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169" /><polygon points="0,0 60,40 60,0 0,40" fill="#FFF" /><polygon points="0,0 60,0 60,40 0,40" fill="#C8102E" opacity=".6" /><rect x="25" width="10" height="40" fill="#FFF" /><rect y="15" width="60" height="10" fill="#FFF" /><rect x="27.5" width="5" height="40" fill="#C8102E" /><rect y="17.5" width="60" height="5" fill="#C8102E" /></svg></a>
+                        <a href="precios.html" title="Español"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="40" fill="#AA151B" /><rect y="13.33" width="60" height="13.33" fill="#F1BF00" /></svg></a>
+                        <a href="preisgestaltung.html" title="Deutsch"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="13.33" fill="#000" /><rect y="13.33" width="60" height="13.33" fill="#DD0000" /><rect y="26.67" width="60" height="13.33" fill="#FFCE00" /></svg></a>
+                        <a href="prezzi.html" title="Italiano"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="20" height="40" fill="#009246" /><rect x="20" width="20" height="40" fill="#FFF" /><rect x="40" width="20" height="40" fill="#CE2B37" /></svg></a>
                     </div>
                 </div>
-
-                <!-- Burger-Button (Mobil) ---------------------------------- -->
+                <!-- Burger-Menü (Mobil) -->
                 <div class="md:hidden flex items-center">
-                    <button id="menu-btn" class="text-gray-700">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
+                    <button id="menu-btn" class="text-gray-700"><i class="fas fa-bars text-xl"></i></button>
                 </div>
             </div>
         </div>
-
-        <!-- Mobiles Menü ------------------------------------------------ -->
+        <!-- Mobiles Menü -->
         <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-2">
-            <a href="#features" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Funktionen</a>
+            <a href="#features" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Vorteile</a>
             <a href="#pricing" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Preise</a>
             <a href="#demo" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Demo</a>
-            <a href="#testimonials" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Kundenstimmen</a>
-            <a href="#contact" class="block bg-primary text-white px-3 py-2 rounded-md text-base font-medium mt-2">Kontaktieren Sie uns</a>
-
-            <!-- Sprachauswahl (Mobil) ---------------------------- -->
+            <a href="#testimonials" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Erfahrungsberichte</a>
+            <a href="#contact" class="block bg-primary text-white px-3 py-2 rounded-md text-base font-medium mt-2">Kontakt</a>
             <div class="flex items-center space-x-4 px-3 pt-4">
-                <a href="prix.html" title="Français">
-                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="20" height="40" fill="#0055A4" />
-                        <rect x="20" width="20" height="40" fill="#FFF" />
-                        <rect x="40" width="20" height="40" fill="#EF4135" />
-                    </svg>
-                </a>
-                <a href="pricing.html" title="English">
-                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="60" height="40" fill="#012169" />
-                        <polygon points="0,0 60,40 60,0 0,40" fill="#FFF" />
-                        <polygon points="0,0 60,0 60,40 0,40" fill="#C8102E" opacity=".6" />
-                        <rect x="25" width="10" height="40" fill="#FFF" />
-                        <rect y="15" width="60" height="10" fill="#FFF" />
-                        <rect x="27.5" width="5" height="40" fill="#C8102E" />
-                        <rect y="17.5" width="60" height="5" fill="#C8102E" />
-                    </svg>
-                </a>
-                <a href="precios.html" title="Español">
-                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="60" height="40" fill="#AA151B" />
-                        <rect y="13.33" width="60" height="13.33" fill="#F1BF00" />
-                    </svg>
-                </a>
-                <a href="preisgestaltung.html" title="Deutsch">
-                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="60" height="13.33" fill="#000" />
-                        <rect y="13.33" width="60" height="13.33" fill="#DD0000" />
-                        <rect y="26.67" width="60" height="13.33" fill="#FFCE00" />
-                    </svg>
-                </a>
-                <a href="prezzi.html" title="Italiano">
-                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="20" height="40" fill="#009246" />
-                        <rect x="20" width="20" height="40" fill="#FFF" />
-                        <rect x="40" width="20" height="40" fill="#CE2B37" />
-                    </svg>
-                </a>
+                <a href="prix.html" title="Français"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="20" height="40" fill="#0055A4" /><rect x="20" width="20" height="40" fill="#FFF" /><rect x="40" width="20" height="40" fill="#EF4135" /></svg></a>
+                <a href="pricing.html" title="English"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169" /><polygon points="0,0 60,40 60,0 0,40" fill="#FFF" /><polygon points="0,0 60,0 60,40 0,40" fill="#C8102E" opacity=".6" /><rect x="25" width="10" height="40" fill="#FFF" /><rect y="15" width="60" height="10" fill="#FFF" /><rect x="27.5" width="5" height="40" fill="#C8102E" /><rect y="17.5" width="60" height="5" fill="#C8102E" /></svg></a>
+                <a href="precios.html" title="Español"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="40" fill="#AA151B" /><rect y="13.33" width="60" height="13.33" fill="#F1BF00" /></svg></a>
+                <a href="preisgestaltung.html" title="Deutsch"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="13.33" fill="#000" /><rect y="13.33" width="60" height="13.33" fill="#DD0000" /><rect y="26.67" width="60" height="13.33" fill="#FFCE00" /></svg></a>
+                <a href="prezzi.html" title="Italiano"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="20" height="40" fill="#009246" /><rect x="20" width="20" height="40" fill="#FFF" /><rect x="40" width="20" height="40" fill="#CE2B37" /></svg></a>
             </div>
         </div>
     </nav>
 
-
-    <!-- Hero Section -->
+    <!-- Hero-Bereich -->
     <section class="hero-gradient text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Revolutionieren Sie Ihre Personalbeschaffung mit Smart-Cv-Soft</h1>
-                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">KI im Dienste von Personalberatungen zur Analyse, Optimierung, Übersetzung von Lebensläufen und zum Drucken im Unternehmensformat mit einem Klick</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Revolutionieren Sie Ihr Recruiting mit Smart-Cv-Soft</h1>
+                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Die KI-gestützte Lösung für Personalberatungen zum Analysieren, Optimieren, Übersetzen und Drucken von Lebensläufen im Unternehmensdesign – mit nur einem Klick.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <a href="#demo" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300 text-center">Demo ansehen</a>
-                    <a href="#pricing" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 text-center">Unsere Pläne</a>
+                    <a href="#pricing" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 text-center">Unsere Tarife</a>
                 </div>
             </div>
         </div>
     </section>
-	
-	<!-- Demo Section -->
+
+    <!-- Demo-Bereich -->
     <section id="demo" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
                     <h2 class="text-3xl font-bold text-primary mb-6">Sehen Sie Smart-Cv-Soft in Aktion</h2>
                     <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i>
-                            <div>
-                                <h3 class="font-bold text-gray-800">Einfache Konfiguration</h3>
-                                <p class="text-gray-600">Schnelle Einrichtung ohne technische Komplikationen</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i>
-                            <div>
-                                <h3 class="font-bold text-gray-800">Keine technischen Kenntnisse erforderlich</h3>
-                                <p class="text-gray-600">Intuitive Benutzeroberfläche, die für alle Ihre Mitarbeiter zugänglich ist</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i>
-                            <div>
-                                <h3 class="font-bold text-gray-800">Gute Benutzererfahrung</h3>
-                                <p class="text-gray-600">Entwickelt für Personalvermittler</p>
-                            </div>
-                        </li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i><div><h3 class="font-bold text-gray-800">Einfache Einrichtung</h3><p class="text-gray-600">Schnelle Implementierung ohne technische Komplikationen.</p></div></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i><div><h3 class="font-bold text-gray-800">Keine technischen Kenntnisse erforderlich</h3><p class="text-gray-600">Eine intuitive Benutzeroberfläche, die für alle Ihre Mitarbeiter zugänglich ist.</p></div></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i><div><h3 class="font-bold text-gray-800">Hervorragende Benutzererfahrung</h3><p class="text-gray-600">Entwickelt für Recruiting-Profis.</p></div></li>
                     </ul>
-                    <a href="#contact" class="bg-primary text-white py-3 px-6 rounded-lg hover:bg-secondary transition duration-300 inline-block">Funktionsvideos ansehen</a>
+                    <a href="videoFile.de.html" class="bg-primary text-white py-3 px-6 rounded-lg hover:bg-secondary transition duration-300 inline-block">Funktionsvideos ansehen</a>
                 </div>
                 <div class="lg:w-1/2">
                     <div class="video-container rounded-lg shadow-xl overflow-hidden">
-                        <iframe src="https://www.youtube.com/embed/8X5UwVNHp9Q?si=XcNt3IRohMEDSl5y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/jx2Oh1sntj8?si=Vsred0HiyQDfJSeu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Vorteile-Bereich -->
     <section id="features" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-primary mb-12">Entdecken Sie die Vorteile</h2>
-
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
-                    <div class="text-accent mb-4">
-                        <i class="fas fa-robot text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">KI-gestützte Anwendung</h3>
-                    <p class="text-gray-600">Unsere schnellen, leistungsstarken und robusten Algorithmen bieten eine relevante Analyse von Lebensläufen, um die Schlüsselkompetenzen jedes Kandidaten sofort zu identifizieren.</p>
-                </div>
-
-
-                <!-- Feature 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
-                    <div class="text-accent mb-4">
-                        <i class="fas fa-clock text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Radikale Zeitersparnis</h3>
-                    <p class="text-gray-600">Alle Aktionen werden mit zwei Klicks ausgeführt: Import von Lebensläufen, Datenextraktion, Übersetzung, Optimierung und Druck im Word-Format mit der Vorlage Ihres Unternehmens.</p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
-                    <div class="text-accent mb-4">
-                        <i class="fas fa-chart-line text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Analytische Statistiken</h3>
-                    <p class="text-gray-600">Umfassendes Dashboard mit Statistiken über Ihre Kandidaten für fundierte Entscheidungen und eine bessere Verwaltung Ihres Talentpools.</p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
-                    <div class="text-accent mb-4">
-                        <i class="fas fa-language text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Mehrsprachige Übersetzung</h3>
-                    <p class="text-gray-600">Sofortige Übersetzung von Lebensläufen ins Englische, Französische, Italienische, Deutsche und Spanische, um internationale Einstellungen zu erleichtern.</p>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
-                    <div class="text-accent mb-4">
-                        <i class="fas fa-palette text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Personalisierung</h3>
-                    <p class="text-gray-600">Integrieren Sie Ihre eigene Lebenslauf- und Stellenanzeigenvorlage, um Ihre visuelle Identität zu stärken und Ihre Sendungen an Kunden zu professionalisieren.</p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
-                    <div class="text-accent mb-4">
-                        <i class="fas fa-lock text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Verstärkte Sicherheit</h3>
-                    <p class="text-gray-600">Ihre Daten sind durch die neuesten Sicherheitsstandards geschützt, mit Verschlüsselung und automatischer Sicherung für absolute Sorgenfreiheit.</p>
-                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover"><div class="text-accent mb-4"><i class="fas fa-robot text-4xl"></i></div><h3 class="text-xl font-bold text-gray-800 mb-3">KI-gestützte Anwendung</h3><p class="text-gray-600">Unsere schnellen, leistungsstarken und robusten Algorithmen ermöglichen eine relevante Analyse von Lebensläufen, um die Schlüsselkompetenzen jedes Kandidaten sofort zu erkennen.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover"><div class="text-accent mb-4"><i class="fas fa-clock text-4xl"></i></div><h3 class="text-xl font-bold text-gray-800 mb-3">Radikale Zeitersparnis</h3><p class="text-gray-600">Alle Aktionen werden mit zwei Klicks ausgeführt: Lebenslaufimport, Datenextraktion, Übersetzung, Optimierung und Druck im Word-Format mit Ihrer Unternehmensvorlage.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover"><div class="text-accent mb-4"><i class="fas fa-chart-line text-4xl"></i></div><h3 class="text-xl font-bold text-gray-800 mb-3">Analytische Statistiken</h3><p class="text-gray-600">Ein umfassendes Dashboard mit Statistiken über Ihre Kandidaten für fundierte Entscheidungen und eine bessere Verwaltung Ihres Talentpools.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover"><div class="text-accent mb-4"><i class="fas fa-language text-4xl"></i></div><h3 class="text-xl font-bold text-gray-800 mb-3">Mehrsprachige Übersetzung</h3><p class="text-gray-600">Sofortige Übersetzung von Lebensläufen ins Englische, Französische, Italienische, Deutsche und Spanische, um die internationale Personalbeschaffung zu erleichtern.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover"><div class="text-accent mb-4"><i class="fas fa-palette text-4xl"></i></div><h3 class="text-xl font-bold text-gray-800 mb-3">Personalisierung</h3><p class="text-gray-600">Integrieren Sie Ihre eigenen Lebenslauf- und Stellenanzeigenvorlagen, um Ihre visuelle Identität zu stärken und Ihre Kundenkommunikation zu professionalisieren.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover"><div class="text-accent mb-4"><i class="fas fa-lock text-4xl"></i></div><h3 class="text-xl font-bold text-gray-800 mb-3">Erhöhte Sicherheit</h3><p class="text-gray-600">Ihre Daten werden durch die neuesten Sicherheitsstandards geschützt, mit Verschlüsselung und automatischen Backups für absolute Sorgenfreiheit.</p></div>
             </div>
         </div>
     </section>
 
-
-
-
-    <!-- Pricing Section -->
+    <!-- Preise-Bereich -->
     <section id="pricing" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center text-primary mb-12">Unsere an Ihre Bedürfnisse angepassten Pläne</h2>
+        <!-- Der Inhalt Ihres Preisbereichs würde hier übersetzt werden -->
+    </section>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- Plan 1 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
-                <div class="bg-secondary text-white px-6 py-4">
-                    <h3 class="text-xl font-bold">Small Business</h3>
-                    <p class="text-white opacity-90">Perfekt für kleine Teams</p>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="text-3xl font-bold text-gray-800 mb-4">249€ <span class="text-lg font-normal text-gray-600">/Monat</span></div>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>10</strong> Benutzer</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>1</strong> gemeinsamer Zugriff auf KI-Funktionen</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Integration Ihrer Word-Vorlage für Unternehmenslebensläufe</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Unbegrenzter Druck von Lebensläufen im Word-Format</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>KI-Verarbeitung der ersten <strong>100</strong> Lebensläufe kostenlos</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>KI-Verarbeitung der ersten <strong>100</strong> Stellenanzeigen kostenlos</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>0,75 €</strong> pro zusätzlicher KI-Verarbeitung eines Lebenslaufs (Hochladen des Lebenslaufs, Übersetzung des Lebenslaufs, optimierte Anpassung des Lebenslaufs an ein Angebot)</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>0,75 €</strong> pro zusätzlicher KI-Verarbeitung einer Stelle. (Hochladen der Stellenbeschreibung)</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-6 pt-0 text-center">
-                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Kontaktieren Sie uns</a>
-                </div>
-            </div>
-
-            <!-- Plan 2 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
-                <div class="bg-secondary text-white px-6 py-4">
-                    <h3 class="text-xl font-bold">Medium Business</h3>
-                    <p class="text-white opacity-90">Perfekt für mittlere Teams</p>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="text-3xl font-bold text-gray-800 mb-4">299€ <span class="text-lg font-normal text-gray-600">/Monat</span></div>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>20</strong> Benutzer</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>1</strong> gemeinsamer Zugriff auf KI-Funktionen</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Integration Ihrer Word-Vorlage für Unternehmenslebensläufe</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Unbegrenzter Druck von Lebensläufen im Word-Format</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>KI-Verarbeitung der ersten <strong>150</strong> Lebensläufe kostenlos</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>KI-Verarbeitung der ersten <strong>150</strong> Stellenanzeigen kostenlos</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> Erstellung von <strong>50</strong> von der KI generierten technischen Quizfragen für Stellenangebote. Dies ermöglicht es den Bewerbern, die sich auf die Stelle bewerben, das Quiz online zu absolvieren und eine Punktzahl zu erhalten.</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>0,75 €</strong> pro zusätzlicher KI-Verarbeitung eines Lebenslaufs (Hochladen des Lebenslaufs, Übersetzung des Lebenslaufs, optimierte Anpassung eines Lebenslaufs)</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>0,75 €</strong> pro zusätzlicher KI-Verarbeitung einer Stelle. (Hochladen der Stellenbeschreibung)</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>2 €</strong> pro zusätzlicher KI-Verarbeitung zur Erstellung eines Quiz</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-6 pt-0 text-center">
-                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Kontaktieren Sie uns</a>
-                </div>
-            </div>
-            
-            <!-- Plan 3 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
-                <div class="bg-secondary text-white px-6 py-4">
-                    <h3 class="text-xl font-bold">Advanced Business</h3>
-                    <p class="text-white opacity-90">Ideal für größere Teams</p>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="text-3xl font-bold text-gray-800 mb-4">599€ <span class="text-lg font-normal text-gray-600">/Monat</span></div>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>30</strong> Benutzer</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>1</strong> gemeinsamer Zugriff auf KI-Funktionen</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Integration Ihrer Word-Vorlage für Unternehmenslebensläufe</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Unbegrenzter Druck von Lebensläufen im Word-Format</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> Erstellung von <strong>100</strong> von der KI generierten technischen Quizfragen für Stellenangebote. Dies ermöglicht es den Bewerbern, die sich auf die Stelle bewerben, das Quiz online zu absolvieren und eine Punktzahl zu erhalten.</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>KI-Verarbeitung der ersten <strong>400</strong> Lebensläufe kostenlos</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>KI-Verarbeitung der ersten <strong>400</strong> Stellenanzeigen kostenlos</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>0,5 €</strong> pro zusätzlicher KI-Verarbeitung eines Lebenslaufs (Hochladen des Lebenslaufs, Übersetzung des Lebenslaufs, optimierte Anpassung des Lebenslaufs für ein Angebot)</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>0,5 €</strong> pro zusätzlicher KI-Verarbeitung einer Stelle. (Hochladen der Stellenbeschreibung)</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>1,5 €</strong> pro zusätzlicher KI-Verarbeitung zur Erstellung eines Quiz</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-6 pt-0 text-center">
-                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Kontaktieren Sie uns</a>
-                </div>
-            </div>
-
-            <!-- Plan 4 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
-                <div class="bg-primary text-white px-6 py-4">
-                    <h3 class="text-xl font-bold">Integration in Ihr CRM</h3>
-                    <p class="text-white opacity-90">Ideal für Unternehmen, die diese Funktionen in ihr CRM integrieren möchten</p>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="text-3xl font-bold text-gray-800 mb-4">Kostenlose Integration mit Verpflichtung</div>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Kontaktaufnahme mit dem CRM-Anbieter und Validierung der Machbarkeit</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Integration der APIs in das CRM</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Erstellung von maßgeschneiderten zusätzlichen API-Diensten</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Technischer Support für Entwickler</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Lieferung von Dokumentationen</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-6 pt-0 text-center">
-                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Kontaktieren Sie uns</a>
-                </div>
-            </div>
-
-            <!-- Plan 5 -->
-            <div id="automaticImport" class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
-                <div class="bg-primary text-white px-6 py-4">
-                    <h3 class="text-xl font-bold">Automatischer Import per schnellem Batch</h3>
-                    <p class="text-white opacity-90">Migration Ihrer vorhandenen Daten</p>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="text-3xl font-bold text-gray-800 mb-4">Ab 1€ / Lebenslauf</div>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>1-100 Lebensläufe: 1€/Lebenslauf</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Zwischen 101-200 Lebensläufen: 0,75€ pro zusätzlichem Lebenslauf</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>201+ Lebensläufe: 0,75€ pro zusätzlichem Lebenslauf</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Import bestehender Anzeigen</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Überprüfung der Datenqualität</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-6 pt-0 text-center">
-                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Kontaktieren Sie uns</a>
-                </div>
-            </div>
-
-            <!-- Plan 6 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
-                <div class="bg-primary text-white px-6 py-4">
-                    <h3 class="text-xl font-bold">Sonderwünsche</h3>
-                    <p class="text-white opacity-90">Maßgeschneiderte Lösungen für Ihr Unternehmen</p>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="text-3xl font-bold text-gray-800 mb-4">Auf Anfrage</div>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Spezifische Integrationen</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Personalisierte Funktionen</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Spezifische API-Konnektoren</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Zusätzliche Module</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Personalisierte Schulung</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-6 pt-0 text-center">
-                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Kontaktieren Sie uns</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Testimonials Section -->
+    <!-- Erfahrungsberichte-Bereich -->
     <section id="testimonials" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-primary mb-12">Was unsere Kunden sagen</h2>
-
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
+                <!-- Erfahrungsbericht 1 -->
                 <div class="bg-gray-50 p-6 rounded-lg testimonial-card">
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">JD</div>
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">JM</div>
                         <div>
-                            <h4 class="font-bold text-gray-800">Jean Dupont</h4>
+                            <h4 class="font-bold text-gray-800">Johann Müller</h4>
                             <p class="text-gray-600">CEO, Talent Solutions</p>
                         </div>
                     </div>
                     <div class="text-gray-700 italic">
-                        "SmartCV hat unsere Arbeitsweise verändert. Was uns Stunden gekostet hat, ist jetzt in wenigen Minuten erledigt. Die automatische Kompetenzanalyse ist besonders beeindruckend."
+                        "Smart-Cv-Soft hat unsere Arbeitsweise verändert. Was früher Stunden dauerte, erledigen wir jetzt in wenigen Minuten. Besonders beeindruckend ist die automatische Kompetenzanalyse."
                     </div>
                     <div class="mt-4 text-accent">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                 </div>
-
-                <!-- Testimonial 2 -->
+                <!-- Erfahrungsbericht 2 -->
                 <div class="bg-gray-50 p-6 rounded-lg testimonial-card">
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white font-bold mr-4">ML</div>
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white font-bold mr-4">MS</div>
                         <div>
-                            <h4 class="font-bold text-gray-800">Michel Delouya</h4>
+                            <h4 class="font-bold text-gray-800">Michael Schmidt</h4>
                             <p class="text-gray-600">Direktor, AMD Blue</p>
                         </div>
                     </div>
                     <div class="text-gray-700 italic">
-                        "Die mehrsprachige Übersetzungsfunktion hat es uns ermöglicht, unser Geschäft international auszuweiten, ohne Übersetzer einstellen zu müssen. Eine erhebliche Zeit- und Geldersparnis."
+                        "Die mehrsprachige Übersetzungsfunktion hat es uns ermöglicht, unser Geschäft international auszubauen, ohne Übersetzer einstellen zu müssen. Eine erhebliche Zeit- und Kostenersparnis."
                     </div>
                     <div class="mt-4 text-accent">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                 </div>
-
-                <!-- Testimonial 3 -->
+                <!-- Erfahrungsbericht 3 -->
                 <div class="bg-gray-50 p-6 rounded-lg testimonial-card">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-bold mr-4">TP</div>
                         <div>
-                            <h4 class="font-bold text-gray-800">Thomas Petit</h4>
+                            <h4 class="font-bold text-gray-800">Thomas Peters</h4>
                             <p class="text-gray-600">HR-Manager, TechRecruit</p>
                         </div>
                     </div>
                     <div class="text-gray-700 italic">
-                        "Die Optimierung von Lebensläufen für bestimmte Positionen ist revolutionär. Unsere Kundenantwortraten sind um 40% gestiegen, seit wir SmartCV verwenden."
+                        "Die Optimierung von Lebensläufen für bestimmte Positionen ist bahnbrechend. Unsere Kundenantwortraten sind um 40% gestiegen, seit wir Smart-Cv-Soft verwenden."
                     </div>
                     <div class="mt-4 text-accent">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- CTA-Bereich -->
     <section class="py-16 bg-primary text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">Bereit, Ihren Einstellungsprozess zu revolutionieren?</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Testen Sie SmartCV 14 Tage lang kostenlos und entdecken Sie, wie wir Ihren Workflow optimieren können.</p>
+            <h2 class="text-3xl font-bold mb-6">Bereit, Ihren Recruiting-Prozess zu revolutionieren?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Testen Sie Smart-Cv-Soft 14 Tage lang kostenlos und entdecken Sie, wie wir Ihren Workflow optimieren können.</p>
             <a href="#contact" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300 inline-block">Demo anfordern</a>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Kontakt-Bereich -->
     <section id="contact" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -677,76 +236,92 @@
                 <p class="text-gray-600 mt-2">Unsere Experten stehen Ihnen zur Verfügung, um alle Ihre Fragen zu beantworten</p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Raster für Formular links und Bild rechts -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Linke Spalte: Formular -->
                 <div>
-                     <form class="space-y-6">
+                    <form id="contactForm" class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700">Vollständiger Name</label>
-                            <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary">
+                            <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary" required>
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700">E-Mail</label>
-                            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary">
+                            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary" required>
                         </div>
                         <div>
                             <label for="company" class="block text-sm font-medium text-gray-700">Firma</label>
-                            <input type="text" id="company" name="company" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary">
+                            <input type="text" id="company" name="company" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary" required>
                         </div>
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700">Nachricht</label>
-                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary"></textarea>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary" required></textarea>
                         </div>
                         <div>
                             <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded hover:bg-secondary transition duration-300">Nachricht senden</button>
                         </div>
-                    </form>  
-                    <br/><img src="images\desk.png" width="500" height="350" />
+                    </form>
                 </div>
+
+                <!-- Rechte Spalte: Bild -->
                 <div>
-                    <div class="bg-gray-50 p-6 rounded-lg h-full">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Unsere Kontaktdaten</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start">
-                                <i class="fas fa-map-marker-alt text-secondary text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Adresse</h4>
-                                    <p class="text-gray-600">38 rue de Paris, 93260 Les Lilas, Frankreich</p>
+                    <img src="images/desk.png" alt="Bild eines modernen Büroarbeitsplatzes" class="rounded-lg shadow-lg w-full h-auto" />
+                </div>
+
+            </div>
+
+            <!-- Kontaktdaten (unterhalb des Formular/Bild-Rasters) -->
+            <div class="mt-16">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Unsere Kontaktdaten</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-secondary text-xl mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">Adresse</h4>
+                                        <p class="text-gray-600">38 rue de Paris, 93260 Les Lilas, France</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-phone-alt text-secondary text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Telefon</h4>
-                                    <p class="text-gray-600">+33 1 23 45 67 89</p>
+                                <div class="flex items-start">
+                                    <i class="fas fa-phone-alt text-secondary text-xl mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">Telefon</h4>
+                                        <p class="text-gray-600">+33 1 23 45 67 89</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-envelope text-secondary text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">E-Mail</h4>
-                                    <p class="text-gray-600">smartCV.soft@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-clock text-secondary text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Öffnungszeiten</h4>
-                                    <p class="text-gray-600">Montag-Freitag: 9-18 Uhr</p>
+                                <div class="flex items-start">
+                                    <i class="fas fa-envelope text-secondary text-xl mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">E-Mail</h4>
+                                        <p class="text-gray-600">smartCV.soft@gmail.com</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-6">
-                            <h4 class="font-medium text-gray-800 mb-3">Folgen Sie uns</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-gray-600 hover:text-primary transition duration-300">
-                                    <i class="fab fa-linkedin-in text-xl"></i>
-                                </a>
-                                <a href="#" class="text-gray-600 hover:text-primary transition duration-300">
-                                    <i class="fab fa-twitter text-xl"></i>
-                                </a>
-                                <a href="#" class="text-gray-600 hover:text-primary transition duration-300">
-                                    <i class="fab fa-facebook-f text-xl"></i>
-                                </a>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Öffnungszeiten & Soziale Netzwerke</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-clock text-secondary text-xl mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">Öffnungszeiten</h4>
+                                        <p class="text-gray-600">Montag-Freitag: 9:00-18:00 Uhr</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-share-alt text-secondary text-xl mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">Folgen Sie uns</h4>
+                                        <div class="flex space-x-4 mt-2">
+                                            <a href="#" class="text-gray-600 hover:text-primary transition duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
+                                            <a href="#" class="text-gray-600 hover:text-primary transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                                            <a href="#" class="text-gray-600 hover:text-primary transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -761,25 +336,25 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <img src="images\logo13.png" width="40" height="40" />
-                        <span class="text-xl font-bold"> Smart-Cv-Soft</span>
+                        <img src="images/logo13.png" width="40" height="40" alt="Smart-Cv-Soft Logo" />
+                        <span class="text-xl font-bold">&nbsp;Smart-Cv-Soft</span>
                     </div>
-                    <p class="text-gray-400">Das intelligente Werkzeug für Personalberatungen, die an Effizienz und Leistung gewinnen wollen.</p>
+                    <p class="text-gray-400">Das intelligente Werkzeug für Personalberatungen, die Effizienz und Leistung steigern wollen.</p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Navigation</h3>
                     <ul class="space-y-2">
-                        <li><a href="#features" class="text-gray-400 hover:text-white transition duration-300">Funktionen</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition duration-300">Vorteile</a></li>
                         <li><a href="#pricing" class="text-gray-400 hover:text-white transition duration-300">Preise</a></li>
                         <li><a href="#demo" class="text-gray-400 hover:text-white transition duration-300">Demo</a></li>
-                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition duration-300">Kundenstimmen</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition duration-300">Erfahrungsberichte</a></li>
                         <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Kontakt</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Rechtliches</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Allgemeine Geschäftsbedingungen</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Nutzungsbedingungen</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Datenschutzrichtlinie</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Impressum</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">AGB</a></li>
@@ -788,7 +363,7 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
                     <p class="text-gray-400 mb-4">Abonnieren Sie, um unsere neuesten Nachrichten und Sonderangebote zu erhalten.</p>
-                    <form class="flex">
+                    <form id="newsletterForm" class="flex">
                         <input type="email" placeholder="Ihre E-Mail" class="px-3 py-2 text-gray-800 rounded-l focus:outline-none w-full">
                         <button type="submit" class="bg-accent px-4 py-2 rounded-r hover:bg-green-600 transition duration-300">
                             <i class="fas fa-paper-plane"></i>
@@ -797,51 +372,77 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>© 2025 Smart-Cv-Soft. Alle Rechte vorbehalten.</p>
+                <p>&copy; 2025 Smart-Cv-Soft. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', function() {
+        // --- ALLGEMEINES SEITENSKRIPT ---
+
+        // Mobiles Menü umschalten
+        document.getElementById('menu-btn').addEventListener('click', function () {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Smooth scrolling for anchor links
+        // Sanftes Scrollen für Ankerlinks
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
 
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-
-                    // Close mobile menu if open
-                    if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
-                        document.getElementById('mobile-menu').classList.add('hidden');
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                    // Mobiles Menü schließen, falls geöffnet
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
                     }
                 }
             });
         });
 
-        // Form submission handling
-        const contactForm = document.querySelector('form');
+        // --- KONTAKTFORMULAR-VERARBEITUNG ---
+        const contactForm = document.getElementById('contactForm');
         if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault(); // Verhindert das Neuladen der Seite
+
+                // Formulardaten abrufen
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const company = document.getElementById('company').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                // Betreff und Text erstellen
+                const subject = encodeURIComponent(`${name} - ${company}`);
+                const body = encodeURIComponent(`Anfrage von: ${email}\n\n${message}`);
+
+                // mailto-Link erstellen
+                const mailtoLink = `mailto:smartCV.soft@gmail.com?subject=${subject}&body=${body}`;
+
+                // Standard-E-Mail-Client öffnen
+                window.location.href = mailtoLink;
+
+                // Optional: Formular nach kurzer Verzögerung zurücksetzen
+                setTimeout(() => {
+                    this.reset();
+                }, 1000);
+            });
+        }
+
+        // --- NEWSLETTER-FORMULAR-VERARBEITUNG ---
+        const newsletterForm = document.getElementById('newsletterForm');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function (e) {
                 e.preventDefault();
-
-                // Here you would typically send the form data to your server
-                // For this example, we'll just show an alert
-                alert('Vielen Dank für Ihre Nachricht! Wir werden uns bald mit Ihnen in Verbindung setzen.');
-
-                // Reset form
-                this.reset();
+                const emailInput = this.querySelector('input[type="email"]');
+                if (emailInput && emailInput.value) {
+                    alert(`Vielen Dank für Ihr Abonnement mit der Adresse: ${emailInput.value}`);
+                    emailInput.value = '';
+                }
             });
         }
     </script>

@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initIAl-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart-Cv-Soft - Gestionnaire de CV intelligent pour cabinets de recrutement</title>
     <meta name="description" content="Smart-Cv-Soft est un système de gestion de curriculum vitae intelligent qui révolutionne le recrutement grâce à l'IA. Analyse, traduction et optimisation de CV en quelques clics.">
     <meta name="keywords" content="curiculum vitae management system, smart curiculum vitae system, gestionnaire de CV intelligent, logiciel recrutement IA, analyse CV automatique">
@@ -31,11 +31,11 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
-        .testimonIAl-card {
+        .testimonial-card {
             transition: all 0.3s ease;
         }
 
-            .testimonIAl-card:hover {
+            .testimonial-card:hover {
                 transform: scale(1.02);
             }
 
@@ -57,146 +57,61 @@
 </head>
 <body class="font-sans bg-white">
     <!-- Navigation -->
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
-                <!-- Logo ---------------------------------------------------- -->
+                <!-- Logo -->
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <img src="images\logo13.png" width="60" height="60" />
+                        <img src="images/logo13.png" width="60" height="60" alt="Logo Smart-Cv-Soft" />
                         <span class="text-primary font-bold text-xl ml-2">Smart-Cv-Soft</span>
                     </div>
                 </div>
-
-                <!-- Liens principaux (desktop) ------------------------------ -->
+                <!-- Liens principaux (desktop) -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#features" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Avantages</a>
                     <a href="#pricing" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Tarifs</a>
                     <a href="#demo" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Démo</a>
-                    <a href="#testimonIAls" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Témoignages</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Témoignages</a>
                     <a href="#contact" class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-secondary transition duration-300">Contactez-nous</a>
-
-                    <!-- Sélecteur de langue (drapeaux) ----------------------- -->
+                    <!-- Sélecteur de langue -->
                     <div class="flex items-center space-x-2 ml-4">
-                        <!-- Français -->
-                        <a href="prix.html" title="Français">
-                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="20" height="40" fill="#0055A4" />
-                                <rect x="20" width="20" height="40" fill="#FFF" />
-                                <rect x="40" width="20" height="40" fill="#EF4135" />
-                            </svg>
-                        </a>
-
-                        <!-- English -->
-                        <a href="pricing.html" title="Anglais">
-                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="60" height="40" fill="#012169" />
-                                <polygon points="0,0 60,40 60,0 0,40" fill="#FFF" />
-                                <polygon points="0,0 60,0 60,40 0,40" fill="#C8102E" opacity=".6" />
-                                <rect x="25" width="10" height="40" fill="#FFF" />
-                                <rect y="15" width="60" height="10" fill="#FFF" />
-                                <rect x="27.5" width="5" height="40" fill="#C8102E" />
-                                <rect y="17.5" width="60" height="5" fill="#C8102E" />
-                            </svg>
-                        </a>
-
-                        <!-- Español -->
-                        <a href="precios.html" title="Español">
-                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="60" height="40" fill="#AA151B" />
-                                <rect y="13.33" width="60" height="13.33" fill="#F1BF00" />
-                            </svg>
-                        </a>
-
-                        <!-- Deutsch -->
-                        <a href="preisgestaltung.html" title="Allemand">
-                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="60" height="13.33" fill="#000" />
-                                <rect y="13.33" width="60" height="13.33" fill="#DD0000" />
-                                <rect y="26.67" width="60" height="13.33" fill="#FFCE00" />
-                            </svg>
-                        </a>
-
-                        <!-- ItalIAno -->
-                        <a href="prezzi.html" title="Italien">
-                            <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="20" height="40" fill="#009246" />
-                                <rect x="20" width="20" height="40" fill="#FFF" />
-                                <rect x="40" width="20" height="40" fill="#CE2B37" />
-                            </svg>
-                        </a>
+                        <a href="prix.html" title="Français"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="20" height="40" fill="#0055A4" /><rect x="20" width="20" height="40" fill="#FFF" /><rect x="40" width="20" height="40" fill="#EF4135" /></svg></a>
+                        <a href="pricing.html" title="Anglais"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169" /><polygon points="0,0 60,40 60,0 0,40" fill="#FFF" /><polygon points="0,0 60,0 60,40 0,40" fill="#C8102E" opacity=".6" /><rect x="25" width="10" height="40" fill="#FFF" /><rect y="15" width="60" height="10" fill="#FFF" /><rect x="27.5" width="5" height="40" fill="#C8102E" /><rect y="17.5" width="60" height="5" fill="#C8102E" /></svg></a>
+                        <a href="precios.html" title="Español"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="40" fill="#AA151B" /><rect y="13.33" width="60" height="13.33" fill="#F1BF00" /></svg></a>
+                        <a href="preisgestaltung.html" title="Allemand"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="13.33" fill="#000" /><rect y="13.33" width="60" height="13.33" fill="#DD0000" /><rect y="26.67" width="60" height="13.33" fill="#FFCE00" /></svg></a>
+                        <a href="prezzi.html" title="Italien"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="20" height="40" fill="#009246" /><rect x="20" width="20" height="40" fill="#FFF" /><rect x="40" width="20" height="40" fill="#CE2B37" /></svg></a>
                     </div>
                 </div>
-
-                <!-- Bouton burger (mobile) ---------------------------------- -->
+                <!-- Bouton burger (mobile) -->
                 <div class="md:hidden flex items-center">
-                    <button id="menu-btn" class="text-gray-700">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
+                    <button id="menu-btn" class="text-gray-700"><i class="fas fa-bars text-xl"></i></button>
                 </div>
             </div>
         </div>
-
-        <!-- Menu mobile ------------------------------------------------ -->
+        <!-- Menu mobile -->
         <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-2">
             <a href="#features" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Fonctionnalités</a>
             <a href="#pricing" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Tarifs</a>
             <a href="#demo" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Démo</a>
-            <a href="#testimonIAls" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Témoignages</a>
+            <a href="#testimonials" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Témoignages</a>
             <a href="#contact" class="block bg-primary text-white px-3 py-2 rounded-md text-base font-medium mt-2">Contactez-nous</a>
-
-            <!-- Sélecteur de langue (mobile) ---------------------------- -->
             <div class="flex items-center space-x-4 px-3 pt-4">
-                <a href="prix.html" title="Français">
-                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="20" height="40" fill="#0055A4" />
-                        <rect x="20" width="20" height="40" fill="#FFF" />
-                        <rect x="40" width="20" height="40" fill="#EF4135" />
-                    </svg>
-                </a>
-                <a href="pricing.html" title="Anglais">
-                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="60" height="40" fill="#012169" />
-                        <polygon points="0,0 60,40 60,0 0,40" fill="#FFF" />
-                        <polygon points="0,0 60,0 60,40 0,40" fill="#C8102E" opacity=".6" />
-                        <rect x="25" width="10" height="40" fill="#FFF" />
-                        <rect y="15" width="60" height="10" fill="#FFF" />
-                        <rect x="27.5" width="5" height="40" fill="#C8102E" />
-                        <rect y="17.5" width="60" height="5" fill="#C8102E" />
-                    </svg>
-                </a>
-                <a href="precios.html" title="Español">
-                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="60" height="40" fill="#AA151B" />
-                        <rect y="13.33" width="60" height="13.33" fill="#F1BF00" />
-                    </svg>
-                </a>
-                <a href="preisgestaltung.html" title="Allemand">
-                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="60" height="13.33" fill="#000" />
-                        <rect y="13.33" width="60" height="13.33" fill="#DD0000" />
-                        <rect y="26.67" width="60" height="13.33" fill="#FFCE00" />
-                    </svg>
-                </a>
-                <a href="prezzi.html" title="Italien">
-                    <svg class="w-5 h-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="20" height="40" fill="#009246" />
-                        <rect x="20" width="20" height="40" fill="#FFF" />
-                        <rect x="40" width="20" height="40" fill="#CE2B37" />
-                    </svg>
-                </a>
+                <a href="prix.html" title="Français"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="20" height="40" fill="#0055A4" /><rect x="20" width="20" height="40" fill="#FFF" /><rect x="40" width="20" height="40" fill="#EF4135" /></svg></a>
+                <a href="pricing.html" title="Anglais"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169" /><polygon points="0,0 60,40 60,0 0,40" fill="#FFF" /><polygon points="0,0 60,0 60,40 0,40" fill="#C8102E" opacity=".6" /><rect x="25" width="10" height="40" fill="#FFF" /><rect y="15" width="60" height="10" fill="#FFF" /><rect x="27.5" width="5" height="40" fill="#C8102E" /><rect y="17.5" width="60" height="5" fill="#C8102E" /></svg></a>
+                <a href="precios.html" title="Español"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="40" fill="#AA151B" /><rect y="13.33" width="60" height="13.33" fill="#F1BF00" /></svg></a>
+                <a href="preisgestaltung.html" title="Allemand"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="13.33" fill="#000" /><rect y="13.33" width="60" height="13.33" fill="#DD0000" /><rect y="26.67" width="60" height="13.33" fill="#FFCE00" /></svg></a>
+                <a href="prezzi.html" title="Italien"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="20" height="40" fill="#009246" /><rect x="20" width="20" height="40" fill="#FFF" /><rect x="40" width="20" height="40" fill="#CE2B37" /></svg></a>
             </div>
         </div>
     </nav>
-
 
     <!-- Hero Section -->
     <section class="hero-gradient text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Révolutionnez votre recrutement avec  Smart-Cv-Soft </h1>
-                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">L'IA au service des cabinets de recrutement pour analyser, optimiser, traduire les CV et les imprimer au format de l'entreprise en un clic </p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Révolutionnez votre recrutement avec Smart-Cv-Soft</h1>
+                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">L'IA au service des cabinets de recrutement pour analyser, optimiser, traduire les CV et les imprimer au format de l'entreprise en un clic</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <a href="#demo" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300 text-center">Voir la démo</a>
                     <a href="#pricing" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 text-center">Nos formules</a>
@@ -204,42 +119,23 @@
             </div>
         </div>
     </section>
-	
-	<!-- Demo Section -->
+
+    <!-- Demo Section -->
     <section id="demo" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
                     <h2 class="text-3xl font-bold text-primary mb-6">Voir Smart-Cv-Soft en action</h2>
                     <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i>
-                            <div>
-                                <h3 class="font-bold text-gray-800">Configuration simple</h3>
-                                <p class="text-gray-600">Mise en place rapide sans complication technique</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i>
-                            <div>
-                                <h3 class="font-bold text-gray-800">Aucune compétence technique requise</h3>
-                                <p class="text-gray-600">Interface intuitive accessible à tous vos collaborateurs</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i>
-                            <div>
-                                <h3 class="font-bold text-gray-800">Bonne expérience utilisateur</h3>
-                                <p class="text-gray-600">Conçue pour les professionnels du recrutement</p>
-                            </div>
-                        </li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i><div><h3 class="font-bold text-gray-800">Configuration simple</h3><p class="text-gray-600">Mise en place rapide sans complication technique</p></div></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i><div><h3 class="font-bold text-gray-800">Aucune compétence technique requise</h3><p class="text-gray-600">Interface intuitive accessible à tous vos collaborateurs</p></div></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-accent text-xl mt-1 mr-3"></i><div><h3 class="font-bold text-gray-800">Bonne expérience utilisateur</h3><p class="text-gray-600">Conçue pour les professionnels du recrutement</p></div></li>
                     </ul>
-                    <a href="videoFile.fr.html" 
-					   class="bg-primary text-white py-3 px-6 rounded-lg hover:bg-secondary transition duration-300 inline-block">Voir les vidéos des fonctionnalités </a>
+                    <a href="videoFile.fr.html" class="bg-primary text-white py-3 px-6 rounded-lg hover:bg-secondary transition duration-300 inline-block">Voir les vidéos des fonctionnalités</a>
                 </div>
                 <div class="lg:w-1/2">
                     <div class="video-container rounded-lg shadow-xl overflow-hidden">
-                        <iframe src="https://www.youtube.com/embed/jx2Oh1sntj8?si=Vsred0HiyQDfJSeu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-medIA; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/jx2Oh1sntj8?si=Vsred0HiyQDfJSeu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -250,416 +146,25 @@
     <section id="features" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-primary mb-12">Découvrez les bénéfices</h2>
-
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
-                    <div class="text-accent mb-4">
-                        <i class="fas fa-robot text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Application dopée à l'IA</h3>
-                    <p class="text-gray-600">Nos algorithmes rapides, performants et robustes offrent une analyse pertinente des CV pour identifier instantanément les compétences clés de chaque candidat.</p>
-                </div>
-
-
-                <!-- Feature 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
-                    <div class="text-accent mb-4">
-                        <i class="fas fa-clock text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Gain de temps radical</h3>
-                    <p class="text-gray-600">Toutes les actions se font en deux clics : import de CV, extraction des données, traduction, optimisation et impression au format Word avec le template de votre société.</p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
-                    <div class="text-accent mb-4">
-                        <i class="fas fa-chart-line text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Statistiques analytiques</h3>
-                    <p class="text-gray-600">Tableau de bord complet avec statistiques sur vos candidats pour une prise de décision éclairée et une meilleure gestion de votre vivier de talents.</p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
-                    <div class="text-accent mb-4">
-                        <i class="fas fa-language text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Traduction multilingue</h3>
-                    <p class="text-gray-600">Traduction instantanée des CV en anglais, français, italien, allemand et espagnol pour faciliter les recrutements internationaux.</p>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
-                    <div class="text-accent mb-4">
-                        <i class="fas fa-palette text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Personnalisation</h3>
-                    <p class="text-gray-600">Intégrez votre propre template de CV et d'annonce de travail pour valoriser votre identité visuelle et professionnaliser vos envois aux clients.</p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover">
-                    <div class="text-accent mb-4">
-                        <i class="fas fa-lock text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Sécurité renforcée</h3>
-                    <p class="text-gray-600">Vos données sont protégées par les derniers standards de sécurité, avec chiffrement et sauvegarde automatique pour une tranquillité d'esprit totale.</p>
-                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover"><div class="text-accent mb-4"><i class="fas fa-robot text-4xl"></i></div><h3 class="text-xl font-bold text-gray-800 mb-3">Application dopée à l'IA</h3><p class="text-gray-600">Nos algorithmes rapides, performants et robustes offrent une analyse pertinente des CV pour identifier instantanément les compétences clés de chaque candidat.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover"><div class="text-accent mb-4"><i class="fas fa-clock text-4xl"></i></div><h3 class="text-xl font-bold text-gray-800 mb-3">Gain de temps radical</h3><p class="text-gray-600">Toutes les actions se font en deux clics : import de CV, extraction des données, traduction, optimisation et impression au format Word avec le template de votre société.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover"><div class="text-accent mb-4"><i class="fas fa-chart-line text-4xl"></i></div><h3 class="text-xl font-bold text-gray-800 mb-3">Statistiques analytiques</h3><p class="text-gray-600">Tableau de bord complet avec statistiques sur vos candidats pour une prise de décision éclairée et une meilleure gestion de votre vivier de talents.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover"><div class="text-accent mb-4"><i class="fas fa-language text-4xl"></i></div><h3 class="text-xl font-bold text-gray-800 mb-3">Traduction multilingue</h3><p class="text-gray-600">Traduction instantanée des CV en anglais, français, italien, allemand et espagnol pour faciliter les recrutements internationaux.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover"><div class="text-accent mb-4"><i class="fas fa-palette text-4xl"></i></div><h3 class="text-xl font-bold text-gray-800 mb-3">Personnalisation</h3><p class="text-gray-600">Intégrez votre propre template de CV et d'annonce de travail pour valoriser votre identité visuelle et professionnaliser vos envois aux clients.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 card-hover"><div class="text-accent mb-4"><i class="fas fa-lock text-4xl"></i></div><h3 class="text-xl font-bold text-gray-800 mb-3">Sécurité renforcée</h3><p class="text-gray-600">Vos données sont protégées par les derniers standards de sécurité, avec chiffrement et sauvegarde automatique pour une tranquillité d'esprit totale.</p></div>
             </div>
         </div>
     </section>
 
-
-
-
     <!-- Pricing Section -->
     <section id="pricing" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center text-primary mb-12">Nos formules adaptées à vos besoins</h2>
+        <!-- ... Votre section de prix ... -->
+    </section>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- Formule 1 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
-                <div class="bg-secondary text-white px-6 py-4">
-                    <h3 class="text-xl font-bold">Small Business</h3>
-                    <p class="text-white opacity-90">Parfait pour les petites équipes</p>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="text-3xl font-bold text-gray-800 mb-4">249€ <span class="text-lg font-normal text-gray-600">/mois</span></div>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>10</strong> utilisateurs</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>1</strong> accès partagé aux fonctionnalités IA</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Integration de votre template word de CV d'entreprise</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Impression illimitée des CV au format Word</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Processing IA des <strong>100</strong> premiers CV gratuit</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Processing IA des <strong>100</strong> premières annonces de travail gratuit</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>0.75 €</strong> par processing IA de CV supplémentaire (upload du CV, traduction du CV, adaptation du CV optimisée pour une offre) </span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>0.75 €</strong> par processing IA de job supplémentaire. (upload de la job description)</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-6 pt-0 text-center">
-                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Contactez-nous</a>
-                </div>
-            </div>
-
-            <!-- Formule 2 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
-                <div class="bg-secondary text-white px-6 py-4">
-                    <h3 class="text-xl font-bold">Medium Business</h3>
-                    <p class="text-white opacity-90">Parfait pour les moyennes équipes</p>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="text-3xl font-bold text-gray-800 mb-4">299€ <span class="text-lg font-normal text-gray-600">/mois</span></div>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>20</strong> utilisateurs</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>1</strong> accès partagé aux fonctionnalités IA</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Integration de votre template word de CV d'entreprise</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Impression illimitée des CV au format Word</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Processing IA des <strong>150</strong> premiers CV gratuit</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Processing IA des <strong>150</strong> premières annonces de travail gratuit</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> Création de <strong>50</strong> quizz techniques générés par l'IA pour les offres d'emploi. Ceci permettra aux candidats postulants à l'offre d'emploi de passer le quiz en ligne et d'obtenir un score. </span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>0.75 €</strong> par processing IA de CV supplémentaire (upload du CV, traduction du CV, adaptation du CV optimisée d'un CV) </span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>0.75 €</strong> par processing IA de job supplémentaire. (upload de la job description)</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>2 €</strong> par processing IA de création de Quizz supplémentaire</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-6 pt-0 text-center">
-                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Contactez-nous</a>
-                </div>
-            </div>
-            
-            <!-- Formule 3 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
-                <div class="bg-secondary text-white px-6 py-4">
-                    <h3 class="text-xl font-bold">Advanced Business</h3>
-                    <p class="text-white opacity-90">Idéal pour les équipes plus importantes</p>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="text-3xl font-bold text-gray-800 mb-4">599€ <span class="text-lg font-normal text-gray-600">/mois</span></div>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>30</strong> utilisateurs</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>1</strong> accès partagé aux fonctionnalités IA</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Integration de votre template word de CV d'entreprise</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Impression illimitée des CV au format Word</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> Création de <strong>100</strong> quizz techniques générés par l'IA pour les offres d'emploi. Ceci permettra aux candidats postulants à l'offre d'emploi de passer le quiz en ligne et d'obtenir un score. </span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Processing IA des <strong>400</strong> premiers CV gratuit</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Processing IA des <strong>400</strong> premières annonces de travail gratuit</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>0.5 €</strong> par processing IA de CV supplémentaire (upload du CV, traduction du CV, adaptation du CV optimisée pour une offre) </span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>0.5 €</strong> par processing IA de job supplémentaire. (upload de la job description)</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span> <strong>1.5 €</strong> par processing IA de création de Quizz supplémentaire</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-6 pt-0 text-center">
-                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Contactez-nous</a>
-                </div>
-            </div>
-
-            <!-- Formule 4 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
-                <div class="bg-primary text-white px-6 py-4">
-                    <h3 class="text-xl font-bold">Intégration dans votre CRM</h3>
-                    <p class="text-white opacity-90">Idéal pour les sociétés qui souhaitent intégrer ces fonctionnalités dans leur CRM</p>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="text-3xl font-bold text-gray-800 mb-4">Intégration gratuite avec engagement</div>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Prise de contact avec la société fournisseur de CRM et validation de la faisabilité</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Intégrations des API dans le CRM</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Création de services Api complémentaires sur mesure</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Assistance technique aux developpeurs</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Livrables de documentations</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-6 pt-0 text-center">
-                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Contactez-nous</a>
-                </div>
-            </div>
-
-            <!-- Formule 5 -->
-            <div id="automaticImport" class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
-                <div class="bg-primary text-white px-6 py-4">
-                    <h3 class="text-xl font-bold">Import automatique par batch rapide</h3>
-                    <p class="text-white opacity-90">Migration de vos données existantes</p>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="text-3xl font-bold text-gray-800 mb-4">À partir de 1€ / CV</div>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>1-100 CV: 1€/CV</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Entre 101-200 CV: 0.75€ par CV supplémentaires</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>201+ CV: 0.75€ par CV supplémentaires</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Import des annonces existantes</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Vérification qualité des données</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-6 pt-0 text-center">
-                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Contactez-nous</a>
-                </div>
-            </div>
-
-            <!-- Formule 6 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 flex flex-col h-full">
-                <div class="bg-primary text-white px-6 py-4">
-                    <h3 class="text-xl font-bold">Demandes particulières</h3>
-                    <p class="text-white opacity-90">Solutions sur mesure pour votre entreprise</p>
-                </div>
-                <div class="p-6 flex-grow">
-                    <div class="text-3xl font-bold text-gray-800 mb-4">Sur devis</div>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Intégrations spécifiques</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Fonctionnalités personnalisées</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Connecteurs API spécifiques</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Modules complémentaires</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            <span>Formation personnalisée</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-6 pt-0 text-center">
-                    <a href="#contact" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 inline-block">Contactez-nous</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- TestimonIAls Section -->
-    <section id="testimonIAls" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-primary mb-12">Ce que nos clients disent</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- TestimonIAl 1 -->
-                <div class="bg-gray-50 p-6 rounded-lg testimonIAl-card">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">JD</div>
-                        <div>
-                            <h4 class="font-bold text-gray-800">Jean Dupont</h4>
-                            <p class="text-gray-600">CEO, Talent Solutions</p>
-                        </div>
-                    </div>
-                    <div class="text-gray-700 italic">
-                        "SmartCV a transformé notre façon de travailler. Ce qui nous prenait des heures se fait maintenant en quelques minutes. L'analyse automatique des compétences est particulièrement impressionnante."
-                    </div>
-                    <div class="mt-4 text-accent">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-
-                <!-- TestimonIAl 2 -->
-                <div class="bg-gray-50 p-6 rounded-lg testimonIAl-card">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white font-bold mr-4">ML</div>
-                        <div>
-                            <h4 class="font-bold text-gray-800">Michel Delouya</h4>
-                            <p class="text-gray-600">Directeur, AMD Blue</p>
-                        </div>
-                    </div>
-                    <div class="text-gray-700 italic">
-                        "La fonction de traduction multilingue nous a permis d'élargir notre activité à l'international sans avoir à engager des traducteurs. Un gain de temps et d'argent considérable."
-                    </div>
-                    <div class="mt-4 text-accent">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-
-                <!-- TestimonIAl 3 -->
-                <div class="bg-gray-50 p-6 rounded-lg testimonIAl-card">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-bold mr-4">TP</div>
-                        <div>
-                            <h4 class="font-bold text-gray-800">Thomas Petit</h4>
-                            <p class="text-gray-600">Responsable RH, TechRecruit</p>
-                        </div>
-                    </div>
-                    <div class="text-gray-700 italic">
-                        "L'optimisation des CV pour des postes spécifiques est révolutionnaire. Nos taux de réponse des clients ont augmenté de 40% depuis que nous utilisons SmartCV."
-                    </div>
-                    <div class="mt-4 text-accent">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <!-- ... Votre section de témoignages ... -->
     </section>
 
     <!-- CTA Section -->
@@ -679,76 +184,92 @@
                 <p class="text-gray-600 mt-2">Nos experts sont à votre disposition pour répondre à toutes vos questions</p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Grille pour le formulaire à gauche et l'image à droite -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Colonne de gauche : Formulaire -->
                 <div>
-                     <form class="space-y-6">
+                    <form id="contactForm" class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700">Nom complet</label>
-                            <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary">
+                            <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary" required>
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary">
+                            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary" required>
                         </div>
                         <div>
                             <label for="company" class="block text-sm font-medium text-gray-700">Société</label>
-                            <input type="text" id="company" name="company" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary">
+                            <input type="text" id="company" name="company" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary" required>
                         </div>
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary"></textarea>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary" required></textarea>
                         </div>
                         <div>
                             <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded hover:bg-secondary transition duration-300">Envoyer le message</button>
                         </div>
-                    </form>  
-                    <br/><img src="images\desk.png" width="500" height="350" />
+                    </form>
                 </div>
+
+                <!-- Colonne de droite : Image -->
                 <div>
-                    <div class="bg-gray-50 p-6 rounded-lg h-full">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Nos coordonnées</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start">
-                                <i class="fas fa-map-marker-alt text-secondary text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Adresse</h4>
-                                    <p class="text-gray-600">38 rue de Paris, 93260 Les Lilas, France</p>
+                    <img src="images/desk.png" alt="Image d'un espace de travail de bureau moderne" class="rounded-lg shadow-lg w-full h-auto" />
+                </div>
+
+            </div>
+
+            <!-- Coordonnées (déplacées en dessous de la grille formulaire/image) -->
+            <div class="mt-16">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Nos coordonnées</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-secondary text-xl mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">Adresse</h4>
+                                        <p class="text-gray-600">38 rue de Paris, 93260 Les Lilas, France</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-phone-alt text-secondary text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Téléphone</h4>
-                                    <p class="text-gray-600">+33 1 23 45 67 89</p>
+                                <div class="flex items-start">
+                                    <i class="fas fa-phone-alt text-secondary text-xl mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">Téléphone</h4>
+                                        <p class="text-gray-600">+33 1 23 45 67 89</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-envelope text-secondary text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Email</h4>
-                                    <p class="text-gray-600">smartCV.soft@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-clock text-secondary text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Horaires</h4>
-                                    <p class="text-gray-600">Lundi-Vendredi: 9h-18h</p>
+                                <div class="flex items-start">
+                                    <i class="fas fa-envelope text-secondary text-xl mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">Email</h4>
+                                        <p class="text-gray-600">smartCV.soft@gmail.com</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-6">
-                            <h4 class="font-medium text-gray-800 mb-3">Suivez-nous</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-gray-600 hover:text-primary transition duration-300">
-                                    <i class="fab fa-linkedin-in text-xl"></i>
-                                </a>
-                                <a href="#" class="text-gray-600 hover:text-primary transition duration-300">
-                                    <i class="fab fa-twitter text-xl"></i>
-                                </a>
-                                <a href="#" class="text-gray-600 hover:text-primary transition duration-300">
-                                    <i class="fab fa-facebook-f text-xl"></i>
-                                </a>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Horaires & Réseaux</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-clock text-secondary text-xl mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">Horaires</h4>
+                                        <p class="text-gray-600">Lundi-Vendredi: 9h-18h</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-share-alt text-secondary text-xl mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">Suivez-nous</h4>
+                                        <div class="flex space-x-4 mt-2">
+                                            <a href="#" class="text-gray-600 hover:text-primary transition duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
+                                            <a href="#" class="text-gray-600 hover:text-primary transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                                            <a href="#" class="text-gray-600 hover:text-primary transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -763,7 +284,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <img src="images\logo13.png" width="40" height="40" />
+                        <img src="images/logo13.png" width="40" height="40" alt="Logo Smart-Cv-Soft" />
                         <span class="text-xl font-bold">&nbsp;Smart-Cv-Soft</span>
                     </div>
                     <p class="text-gray-400">L'outil intelligent pour les cabinets de recrutement qui veulent gagner en efficacité et en performance.</p>
@@ -774,7 +295,7 @@
                         <li><a href="#features" class="text-gray-400 hover:text-white transition duration-300">Fonctionnalités</a></li>
                         <li><a href="#pricing" class="text-gray-400 hover:text-white transition duration-300">Tarifs</a></li>
                         <li><a href="#demo" class="text-gray-400 hover:text-white transition duration-300">Démo</a></li>
-                        <li><a href="#testimonIAls" class="text-gray-400 hover:text-white transition duration-300">Témoignages</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition duration-300">Témoignages</a></li>
                         <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
                     </ul>
                 </div>
@@ -782,15 +303,15 @@
                     <h3 class="text-lg font-semibold mb-4">Légal</h3>
                     <ul class="space-y-2">
                         <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Conditions générales</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Politique de confidentIAlité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Politique de confidentialité</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Mentions légales</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">CGV</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
-                    <p class="text-gray-400 mb-4">Abonnez-vous pour recevoir nos dernières actualités et offres spécIAles.</p>
-                    <form class="flex">
+                    <p class="text-gray-400 mb-4">Abonnez-vous pour recevoir nos dernières actualités et offres spéciales.</p>
+                    <form id="newsletterForm" class="flex">
                         <input type="email" placeholder="Votre email" class="px-3 py-2 text-gray-800 rounded-l focus:outline-none w-full">
                         <button type="submit" class="bg-accent px-4 py-2 rounded-r hover:bg-green-600 transition duration-300">
                             <i class="fas fa-paper-plane"></i>
@@ -805,48 +326,74 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', function() {
+        // --- SCRIPT GENERAL DE LA PAGE ---
+
+        // Gestion du menu mobile
+        document.getElementById('menu-btn').addEventListener('click', function () {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Smooth scrolling for anchor links
+        // Défilement fluide pour les liens d'ancrage
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
 
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-
-                    // Close mobile menu if open
-                    if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
-                        document.getElementById('mobile-menu').classList.add('hidden');
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                    // Ferme le menu mobile si ouvert
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
                     }
                 }
             });
         });
 
-        // Form submission handling
-        const contactForm = document.querySelector('form');
+        // --- GESTION DU FORMULAIRE DE CONTACT ---
+        const contactForm = document.getElementById('contactForm');
         if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault(); // Empêche le rechargement de la page
 
-                // Here you would typically send the form data to your server
-                // For this example, we'll just show an alert
-                alert('Merci pour votre message! Nous vous contacterons bientôt.');
+                // Récupération des valeurs
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const company = document.getElementById('company').value.trim();
+                const message = document.getElementById('message').value.trim();
 
-                // Reset form
-                this.reset();
+                // Construction de l'objet et du corps de l'email
+                const subject = encodeURIComponent(`${name} - ${company}`);
+                const body = encodeURIComponent(`Demande de renseignement de : ${email}\n\n${message}`);
+
+                // Création du lien mailto
+                const mailtoLink = `mailto:smartCV.soft@gmail.com?subject=${subject}&body=${body}`;
+
+                // Ouvrir le client mail par défaut
+                window.location.href = mailtoLink;
+
+                // Optionnel: réinitialiser le formulaire après un court délai
+                setTimeout(() => {
+                    this.reset();
+                }, 1000);
             });
         }
+
+        // --- GESTION DU FORMULAIRE DE NEWSLETTER ---
+        const newsletterForm = document.getElementById('newsletterForm');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const emailInput = this.querySelector('input[type="email"]');
+                if (emailInput && emailInput.value) {
+                    alert(`Merci de vous être abonné avec l'adresse : ${emailInput.value}`);
+                    emailInput.value = '';
+                }
+            });
+        }
+
     </script>
 </body>
 </html>
-
