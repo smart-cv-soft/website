@@ -252,87 +252,52 @@
 
             <!-- Grid for the form on the left and image on the right -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-                <!-- Left Column: Form -->
+                <!-- Contact Details (moved below the form/image grid) -->
                 <div>
-                    <form id="contactForm" class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
-                            <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary" required>
-                        </div>
-                        <div>
-                            <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
-                            <input type="text" id="company" name="company" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary" required>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary focus:border-primary" required></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded hover:bg-secondary transition duration-300">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Right Column: Image -->
-                <div>
-                    <img src="images/desk.png" alt="Image of a modern office workspace" class="rounded-lg shadow-lg w-full h-auto" />
-                </div>
-
-            </div>
-
-            <!-- Contact Details (moved below the form/image grid) -->
-            <div class="mt-16">
-                <div class="bg-gray-50 p-8 rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Our Contact Details</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-start">
-                                    <i class="fas fa-map-marker-alt text-secondary text-xl mt-1 mr-4"></i>
-                                    <div>
-                                        <h4 class="font-medium text-gray-800">Address</h4>
-                                        <p class="text-gray-600">38 rue de Paris, 93260 Les Lilas, France</p>
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Our Contact Details</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-map-marker-alt text-secondary text-xl mt-1 mr-4"></i>
+                                        <div>
+                                            <h4 class="font-medium text-gray-800">Address</h4>
+                                            <p class="text-gray-600">38 rue de Paris, 93260 Les Lilas, France</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-phone-alt text-secondary text-xl mt-1 mr-4"></i>
+                                        <div>
+                                            <h4 class="font-medium text-gray-800">Phone</h4>
+                                            <p class="text-gray-600">+33 1 48 97 19 20</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-envelope text-secondary text-xl mt-1 mr-4"></i>
+                                        <div>
+                                            <h4 class="font-medium text-gray-800">Email</h4>
+                                            <p class="text-gray-600">smartcv.soft@gmail.com</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="flex items-start">
-                                    <i class="fas fa-phone-alt text-secondary text-xl mt-1 mr-4"></i>
-                                    <div>
-                                        <h4 class="font-medium text-gray-800">Phone</h4>
-                                        <p class="text-gray-600">+33 1 48 97 19 20</p>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-clock text-secondary text-xl mt-1 mr-4"></i>
+                                        <div>
+                                            <h4 class="font-medium text-gray-800">Business Hours</h4>
+                                            <p class="text-gray-600">Monday-Friday: 9am-6pm</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="fas fa-envelope text-secondary text-xl mt-1 mr-4"></i>
-                                    <div>
-                                        <h4 class="font-medium text-gray-800">Email</h4>
-                                        <p class="text-gray-600">smartCV.soft@gmail.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Hours & Socials</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-start">
-                                    <i class="fas fa-clock text-secondary text-xl mt-1 mr-4"></i>
-                                    <div>
-                                        <h4 class="font-medium text-gray-800">Business Hours</h4>
-                                        <p class="text-gray-600">Monday-Friday: 9am-6pm</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="fas fa-share-alt text-secondary text-xl mt-1 mr-4"></i>
-                                    <div>
-                                        <h4 class="font-medium text-gray-800">Follow Us</h4>
-                                        <div class="flex space-x-4 mt-2">
-                                            <a href="#" class="text-gray-600 hover:text-primary transition duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
-                                            <a href="#" class="text-gray-600 hover:text-primary transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
-                                            <a href="#" class="text-gray-600 hover:text-primary transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-share-alt text-secondary text-xl mt-1 mr-4"></i>
+                                        <div>
+                                            <h4 class="font-medium text-gray-800">Follow Us</h4>
+                                            <div class="flex space-x-4 mt-2">
+                                                <a href="#" class="text-gray-600 hover:text-primary transition duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
+                                                <a href="#" class="text-gray-600 hover:text-primary transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                                                <a href="#" class="text-gray-600 hover:text-primary transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -340,7 +305,13 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Right Column: Image -->
+                <div>
+                    <img src="images/desk.png" alt="Image of a modern office workspace" class="rounded-lg shadow-lg w-full h-auto" />
+                </div>
             </div>
+
         </div>
     </section>
 
