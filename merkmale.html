@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart-Cv-Soft - Intelligenter Lebenslauf-Manager für Personalvermittlungsagenturen</title>
+    <meta name="description" content="Smart-Cv-Soft ist ein intelligentes Lebenslauf-Managementsystem, das die Personalbeschaffung mithilfe von KI revolutioniert. Analysieren, übersetzen und optimieren Sie Lebensläufe mit nur wenigen Klicks.">
+    <meta name="keywords" content="Lebenslauf-Managementsystem, intelligentes Lebenslaufsystem, intelligenter Lebenslauf-Manager, KI-Rekrutierungssoftware, automatische Lebenslaufanalyse">
+    <!-- Das Tailwind CDN enthält jetzt standardmäßig die Klasse 'aspect-video' -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D7788',
+                        secondary: '#17A2B8',
+                        accent: '#38b44A',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #2D7788 0%, #17A2B8 50%, #38b44A 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+
+            .testimonial-card:hover {
+                transform: scale(1.02);
+            }
+    </style>
+</head>
+<body class="font-sans bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="images/logo13.png" width="60" height="60" alt="Logo Smart-Cv-Soft" />
+                        <span class="text-primary font-bold text-xl ml-2">Smart-Cv-Soft</span>
+                    </div>
+                </div>
+                <!-- Hauptlinks (Desktop) -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Vorteile</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Preise</a>
+                    <a href="#demo" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Demo</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Erfahrungsberichte</a>
+                    <a href="#contact" class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-secondary transition duration-300">Kontaktieren Sie uns</a>
+                    <!-- Sprachauswahl -->
+                    <div class="flex items-center space-x-2 ml-4">
+                        <a href="prix.html" title="Französisch"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="20" height="40" fill="#0055A4" /><rect x="20" width="20" height="40" fill="#FFF" /><rect x="40" width="20" height="40" fill="#EF4135" /></svg></a>
+                        <a href="pricing.html" title="Englisch"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169" /><polygon points="0,0 60,40 60,0 0,40" fill="#FFF" /><polygon points="0,0 60,0 60,40 0,40" fill="#C8102E" opacity=".6" /><rect x="25" width="10" height="40" fill="#FFF" /><rect y="15" width="60" height="10" fill="#FFF" /><rect x="27.5" width="5" height="40" fill="#C8102E" /><rect y="17.5" width="60" height="5" fill="#C8102E" /></svg></a>
+                        <a href="precios.html" title="Spanisch"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="40" fill="#AA151B" /><rect y="13.33" width="60" height="13.33" fill="#F1BF00" /></svg></a>
+                        <a href="preisgestaltung.html" title="Deutsch"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="13.33" fill="#000" /><rect y="13.33" width="60" height="13.33" fill="#DD0000" /><rect y="26.67" width="60" height="13.33" fill="#FFCE00" /></svg></a>
+                        <a href="prezzi.html" title="Italienisch"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="20" height="40" fill="#009246" /><rect x="20" width="20" height="40" fill="#FFF" /><rect x="40" width="20" height="40" fill="#CE2B37" /></svg></a>
+                    </div>
+                </div>
+                <!-- Burger-Button (Mobil) -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700"><i class="fas fa-bars text-xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobiles Menü -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-2">
+            <a href="#features" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Funktionen</a>
+            <a href="#pricing" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Preise</a>
+            <a href="#demo" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Demo</a>
+            <a href="#testimonials" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary">Erfahrungsberichte</a>
+            <a href="#contact" class="block bg-primary text-white px-3 py-2 rounded-md text-base font-medium mt-2">Kontaktieren Sie uns</a>
+            <div class="flex items-center space-x-4 px-3 pt-4">
+                <a href="prix.html" title="Französisch"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="20" height="40" fill="#0055A4" /><rect x="20" width="20" height="40" fill="#FFF" /><rect x="40" width="20" height="40" fill="#EF4135" /></svg></a>
+                <a href="pricing.html" title="Englisch"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169" /><polygon points="0,0 60,40 60,0 0,40" fill="#FFF" /><polygon points="0,0 60,0 60,40 0,40" fill="#C8102E" opacity=".6" /><rect x="25" width="10" height="40" fill="#FFF" /><rect y="15" width="60" height="10" fill="#FFF" /><rect x="27.5" width="5" height="40" fill="#C8102E" /><rect y="17.5" width="60" height="5" fill="#C8102E" /></svg></a>
+                <a href="precios.html" title="Spanisch"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="40" fill="#AA151B" /><rect y="13.33" width="60" height="13.33" fill="#F1BF00" /></svg></a>
+                <a href="preisgestaltung.html" title="Deutsch"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="60" height="13.33" fill="#000" /><rect y="13.33" width="60" height="13.33" fill="#DD0000" /><rect y="26.67" width="60" height="13.33" fill="#FFCE00" /></svg></a>
+                <a href="prezzi.html" title="Italienisch"><svg class="w-5 h-5" viewBox="0 0 60 40"><rect width="20" height="40" fill="#009246" /><rect x="20" width="20" height="40" fill="#FFF" /><rect x="40" width="20" height="40" fill="#CE2B37" /></svg></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero-Bereich -->
+    <section class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Revolutionieren Sie Ihre Personalbeschaffung mit Smart-Cv-Soft</h1>
+                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">KI im Dienste von Personalvermittlungsagenturen, um Lebensläufe zu analysieren, zu optimieren, zu übersetzen und mit einem Klick im Unternehmensformat auszudrucken</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#demo" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300 text-center">Demo ansehen</a>
+                    <a href="#pricing" class="bg-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 text-center">Unsere Pläne</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class='py-16 bg-gray-50'>
+        <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <!-- Section Lebensläufe -->
+            <div class='bg-white rounded-lg shadow-lg overflow-hidden mb-12 card-hover'>
+                <div class='bg-secondary px-6 py-4'>
+                    <h2 class='text-xl font-bold text-white text-left'>Lebensläufe</h2>
+                </div>
+                <div class='p-6 space-y-6'>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=hGreJKxbJI8" target="_blank" class="block w-full h-full">
+                                <img src="images/de/uploadcv.png"
+                                     alt="Diese Funktion ermöglicht es Ihnen, einen neuen Lebenslauf zur Analyse in das System hochzuladen. (Unterstützte Formate: PDF, DOC, DOCX, TXT)"
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=hGreJKxbJI8" target="_blank">Einen neuen Lebenslauf hochladen</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Diese Funktion ermöglicht es Ihnen, einen neuen Lebenslauf zur Analyse in das System hochzuladen. (Unterstützte Formate: PDF, DOC, DOCX, TXT)</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=X-z1tzwyV7s" target="_blank" class="block w-full h-full">
+                                <img src="images/de/downloadCv.png"
+                                     alt="Diese Funktion ermöglicht es Ihnen, den Lebenslauf im Format des Dienstleistungsunternehmens herunterzuladen."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=X-z1tzwyV7s" target="_blank">Den Lebenslauf herunterladen</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Diese Funktion ermöglicht es Ihnen, den Lebenslauf im Format des Dienstleistungsunternehmens herunterzuladen.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=CSHeE3btn3k" target="_blank" class="block w-full h-full">
+                                <img src="images/de/addExp.png"
+                                     alt="Wenn ein Berater einen Auftrag abschließt, nachdem sein Lebenslauf importiert wurde, bietet diese Anwendung die Möglichkeit, diese neue Erfahrung hinzuzufügen. Sobald die Änderungen abgeschlossen sind, kann der Lebenslauf im Word-Format neu ausgedruckt werden."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=CSHeE3btn3k" target="_blank">Eine Berufserfahrung hinzufügen</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Wenn ein Berater einen Auftrag abschließt, nachdem sein Lebenslauf importiert wurde, bietet diese Anwendung die Möglichkeit, diese neue Erfahrung hinzuzufügen. Sobald die Änderungen abgeschlossen sind, kann der Lebenslauf im Word-Format neu ausgedruckt werden.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=HJDu2vYiA70" target="_blank" class="block w-full h-full">
+                                <img src="images/de/updateExp.png"
+                                     alt="Möglicherweise möchten Sie eine oder mehrere Erfahrungen nach dem Import des Lebenslaufs weiter detaillieren. Die Anwendung ermöglicht es Ihnen, diese zu ändern und den aktualisierten Lebenslauf dann im Word-Format neu auszudrucken."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=HJDu2vYiA70" target="_blank">Eine Berufserfahrung aktualisieren</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Möglicherweise möchten Sie eine oder mehrere Erfahrungen nach dem Import des Lebenslaufs weiter detaillieren. Die Anwendung ermöglicht es Ihnen, diese zu ändern und den aktualisierten Lebenslauf dann im Word-Format neu auszudrucken.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=WX6ebip1Gis" target="_blank" class="block w-full h-full">
+                                <img src="images/de/deleteExp.png"
+                                     alt="Nach dem Import des Lebenslaufs eines Kandidaten in das System ist es möglich, eine seiner Berufserfahrungen zu löschen."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=WX6ebip1Gis" target="_blank">Eine Berufserfahrung löschen</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Nach dem Import des Lebenslaufs eines Kandidaten in das System ist es möglich, eine seiner Berufserfahrungen zu löschen.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=7JDXEPAo8UM" target="_blank" class="block w-full h-full">
+                                <img src="images/de/translatecv.png"
+                                     alt="Sobald der Lebenslauf in das System importiert ist, kann er in fünf verschiedene Sprachen übersetzt werden. Neue Sprachen können auf Wunsch des Kunden integriert werden."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=7JDXEPAo8UM" target="_blank">Den Lebenslauf übersetzen</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Sobald der Lebenslauf in das System importiert ist, kann er in fünf verschiedene Sprachen übersetzt werden. Neue Sprachen können auf Wunsch des Kunden integriert werden.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=ptG6y28HwsQ" target="_blank" class="block w-full h-full">
+                                <img src="images/de/updateCert.png"
+                                     alt="Nach dem Import des Lebenslaufs versucht das System, jede Zertifizierung zu identifizieren. Wenn dies fehlschlägt, wird 'zu vervollständigen' angezeigt, damit Vertriebsleiter den richtigen Titel auswählen oder einen neuen hinzufügen können. Dies hilft, die Anzahl der zertifizierten Personen in den Statistiken zu verfolgen."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=ptG6y28HwsQ" target="_blank">Zertifizierungen hinzufügen/aktualisieren</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Nach dem Import des Lebenslaufs versucht das System, jede Zertifizierung zu identifizieren. Wenn dies fehlschlägt, wird 'zu vervollständigen' angezeigt, damit Vertriebsleiter den richtigen Titel auswählen oder einen neuen hinzufügen können. Dies hilft, die Anzahl der zertifizierten Personen in den Statistiken zu verfolgen.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=bZw1sIDN6ds" target="_blank" class="block w-full h-full">
+                                <img src="images/de/updateCoord.png"
+                                     alt="Sobald der Lebenslauf des Kandidaten in das System importiert ist, ist es möglich, seine persönlichen Kontaktdaten zu ändern."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=bZw1sIDN6ds" target="_blank">Kontaktdaten aktualisieren</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Sobald der Lebenslauf des Kandidaten in das System importiert ist, ist es möglich, seine persönlichen Kontaktdaten zu ändern.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=wUpJpobg5o0" target="_blank" class="block w-full h-full">
+                                <img src="images/de/updateDiplomes.png"
+                                     alt="Nach dem Import des Lebenslaufs eines Kandidaten ist es möglich, seine Liste der Abschlüsse zu verwalten."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=wUpJpobg5o0" target="_blank">Abschlüsse aktualisieren</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Nach dem Import des Lebenslaufs eines Kandidaten ist es möglich, seine Liste der Abschlüsse zu verwalten.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=vR3BiNM_EOQ" target="_blank" class="block w-full h-full">
+                                <img src="images/de/updateLangs.png"
+                                     alt="Sobald der Lebenslauf des Kandidaten importiert ist, ist es möglich, die Liste der von ihm gesprochenen Sprachen zu ändern."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=vR3BiNM_EOQ" target="_blank">Gesprochene Sprachen aktualisieren</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Sobald der Lebenslauf des Kandidaten importiert ist, ist es möglich, die Liste der von ihm gesprochenen Sprachen zu ändern.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=-y-Wha3u94U" target="_blank" class="block w-full h-full">
+                                <img src="images/de/updateTechnicalSkills.png"
+                                     alt="Nach dem Import des Lebenslaufs ist es möglich, den Abschnitt der technischen Fähigkeiten im Kopf des Dokuments zu ändern."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=-y-Wha3u94U" target="_blank">Technische Fähigkeiten aktualisieren</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Nach dem Import des Lebenslaufs ist es möglich, den Abschnitt der technischen Fähigkeiten im Kopf des Dokuments zu ändern.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=XqChGpT5u3M" target="_blank" class="block w-full h-full">
+                                <img src="images/de/uploadCvDocs.png"
+                                     alt="Diese Funktion ermöglicht das massenweise Hinzufügen von persönlichen Dokumenten des Kandidaten. Diese Dateien können beim Versenden seiner Bewerbung automatisch angehängt werden."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=XqChGpT5u3M" target="_blank">Dokumente hochladen und aktualisieren</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Diese Funktion ermöglicht das massenweise Hinzufügen von persönlichen Dokumenten des Kandidaten. Diese Dateien können beim Versenden seiner Bewerbung automatisch angehängt werden.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=Kr5OwK_vnX4" target="_blank" class="block w-full h-full">
+                                <img src="images/de/sendInvitation.png"
+                                     alt="Vertriebsleiter können mit wenigen Klicks ein Vorstellungsgespräch planen und dabei die Stellenanzeige angeben, die die Einladung ausgelöst hat."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=Kr5OwK_vnX4" target="_blank">Eine Einladung zum Vorstellungsgespräch senden</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Vertriebsleiter können mit wenigen Klicks ein Vorstellungsgespräch planen und dabei die Stellenanzeige angeben, die die Einladung ausgelöst hat.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class='py-16 bg-gray-50'>
+        <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <!-- Section Stellenanzeigen -->
+            <div class='bg-white rounded-lg shadow-lg overflow-hidden mb-12 card-hover'>
+                <div class='bg-secondary px-6 py-4'>
+                    <h2 class='text-xl font-bold text-white text-left'>Stellenanzeigen</h2>
+                </div>
+                <div class='p-6 space-y-6'>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=KCwm2RNNAeM" target="_blank" class="block w-full h-full">
+                                <img src="images/de/uploadjob.png"
+                                     alt="Ermöglicht das Hochladen der Stellenbeschreibung eines Kunden (Formate: PDF, DOC, DOCX, TXT). Diese Aktion löst eine Berechnung der Kompatibilität mit vorhandenen Lebensläufen aus. Die besten Profile werden dem Vertriebsteam per E-Mail gemeldet."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=KCwm2RNNAeM" target="_blank">Ein Stellenangebot hochladen</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Ermöglicht das Hochladen der Stellenbeschreibung eines Kunden (Formate: PDF, DOC, DOCX, TXT). Diese Aktion löst eine Berechnung der Kompatibilität mit vorhandenen Lebensläufen aus. Die besten Profile werden dem Vertriebsteam per E-Mail gemeldet.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=zLk3m7T549Y" target="_blank" class="block w-full h-full">
+                                <img src="images/de/downloadjob.png"
+                                     alt="Nach dem Import wird die Beschreibung in bearbeitbare Abschnitte vorformatiert, um den Inhalt vor dem Export in das Word-Format anzupassen."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=zLk3m7T549Y" target="_blank">Die Angebotsbeschreibung aktualisieren und herunterladen</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Nach dem Import wird die Beschreibung in bearbeitbare Abschnitte vorformatiert, um den Inhalt vor dem Export in das Word-Format anzupassen.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=Xt27AGY-7eA" target="_blank" class="block w-full h-full">
+                                <img src="images/de/optimizecvforjob.png"
+                                     alt="Es wird eine Kompatibilitätsbewertung zwischen einer Stellenanzeige und den Lebensläufen berechnet. Die relevantesten Profile werden angezeigt, und es ist möglich, einen Lebenslauf für dieses Angebot zu optimieren, was eine neue, bearbeitbare und in Word exportierbare Version erstellt."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=Xt27AGY-7eA" target="_blank">Einen Lebenslauf für ein Stellenangebot optimieren</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Es wird eine Kompatibilitätsbewertung zwischen einer Stellenanzeige und den Lebensläufen berechnet. Die relevantesten Profile werden angezeigt, und es ist möglich, einen Lebenslauf für dieses Angebot zu optimieren, was eine neue, bearbeitbare und in Word exportierbare Version erstellt.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=_xfBmwoN8fM" target="_blank" class="block w-full h-full">
+                                <img src="images/de/sendAppFiles.png"
+                                     alt="Sobald ein Lebenslauf für ein Angebot optimiert ist, erscheint die Schaltfläche 'Bewerbung an den Kunden senden'. Sie ermöglicht die Erstellung einer vorformatierten E-Mail mit dem optimierten Lebenslauf und den Basisdokumenten des Kandidaten als Anhänge."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=_xfBmwoN8fM" target="_blank">Die Bewerbungsunterlagen an den Kunden senden</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Sobald ein Lebenslauf für ein Angebot optimiert ist, erscheint die Schaltfläche 'Bewerbung an den Kunden senden'. Sie ermöglicht die Erstellung einer vorformatierten E-Mail mit dem optimierten Lebenslauf und den Basisdokumenten des Kandidaten als Anhänge.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=_E0EkyHZY4k" target="_blank" class="block w-full h-full">
+                                <img src="images/de/generateQuiz.png"
+                                     alt="Sobald das Stellenangebot analysiert wurde, bietet die Anwendung die Möglichkeit, ein technisches Quiz zu erstellen, indem die Hauptthemen des Angebots vorausgewählt werden. Es ist möglich, diese zu ändern und die Anzahl der Fragen pro Thema festzulegen."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=_E0EkyHZY4k" target="_blank">Ein Quiz für ein Stellenangebot erstellen</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Sobald das Stellenangebot analysiert wurde, bietet die Anwendung die Möglichkeit, ein technisches Quiz zu erstellen, indem die Hauptthemen des Angebots vorausgewählt werden. Es ist möglich, diese zu ändern und die Anzahl der Fragen pro Thema festzulegen.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=kRlTAWSqZmY" target="_blank" class="block w-full h-full">
+                                <img src="images/de/updateQuiz.png"
+                                     alt="Sobald das Quiz für ein Angebot erstellt wurde, ist es möglich, die Fragen zu moderieren. Sie können bestehende Fragen hinzufügen, löschen oder aktualisieren. Es wird auch möglich sein, die für die Kandidaten zur Beantwortung verfügbare Zeit zu ändern."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=kRlTAWSqZmY" target="_blank">Quizfragen aktualisieren</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Sobald das Quiz für ein Angebot erstellt wurde, ist es möglich, die Fragen zu moderieren. Sie können bestehende Fragen hinzufügen, löschen oder aktualisieren. Es wird auch möglich sein, die für die Kandidaten zur Beantwortung verfügbare Zeit zu ändern.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=9kjPVpmSqkc" target="_blank" class="block w-full h-full">
+                                <img src="images/de/doQuiz.png"
+                                     alt="Sobald das Quiz erstellt ist, können Kandidaten, die sich auf das Stellenangebot bewerben, den Test online ablegen. Sie erhalten einen sicheren Link in ihrem E-Mail-Posteingang, um den Test zu absolvieren, und die Ergebnisse werden an den Benutzer gesendet, der die Einladung gesendet hat."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=9kjPVpmSqkc" target="_blank">Einen Kandidaten das Quiz machen lassen</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Sobald das Quiz erstellt ist, können Kandidaten, die sich auf das Stellenangebot bewerben, den Test online ablegen. Sie erhalten einen sicheren Link in ihrem E-Mail-Posteingang, um den Test zu absolvieren, und die Ergebnisse werden an den Benutzer gesendet, der die Einladung gesendet hat.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=XKvpDhuMDs0" target="_blank" class="block w-full h-full">
+                                <img src="images/de/scoreQuiz.png"
+                                     alt="Sobald der Kandidat das Quiz beendet hat, wird seine Punktzahl in der Datenbank gespeichert und kann eingesehen werden. Eine Liste der Ergebnisse der Kandidaten, die das Quiz absolviert haben, wird verfügbar sein."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=XKvpDhuMDs0" target="_blank">Rangliste der Quiz-Ergebnisse</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Sobald der Kandidat das Quiz beendet hat, wird seine Punktzahl in der Datenbank gespeichert und kann eingesehen werden. Eine Liste der Ergebnisse der Kandidaten, die das Quiz absolviert haben, wird verfügbar sein.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class='py-16 bg-gray-50'>
+        <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <!-- Section Rechnungen und Support -->
+            <div class='bg-white rounded-lg shadow-lg overflow-hidden mb-12 card-hover'>
+                <div class='bg-secondary px-6 py-4'>
+                    <h2 class='text-xl font-bold text-white text-left'>Rechnungen und Support</h2>
+                </div>
+                <div class='p-6 space-y-6'>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=7BF5lbd39Rw" target="_blank" class="block w-full h-full">
+                                <img src="images/de/invoice.png"
+                                     alt="Diese Option ermöglicht es Ihnen, den Status Ihrer Rechnungen anzuzeigen und sie herunterzuladen."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=7BF5lbd39Rw" target="_blank">Rechnungen anzeigen und herunterladen</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Diese Option ermöglicht es Ihnen, den Status Ihrer Rechnungen anzuzeigen und sie herunterzuladen.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=PIJnsNNmHO8" target="_blank" class="block w-full h-full">
+                                <img src="images/de/supportReq.png"
+                                     alt="Verwenden Sie diese Option, um eine Frage zu stellen oder einen Fehler an unser Support-Team zu melden."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=PIJnsNNmHO8" target="_blank">Support kontaktieren</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Verwenden Sie diese Option, um eine Frage zu stellen oder einen Fehler an unser Support-Team zu melden.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=VV9ZJ3qRoVY" target="_blank" class="block w-full h-full">
+                                <img src="images/de/unsubscibe.png"
+                                     alt="Diese Option ermöglicht es Ihnen, Ihr Abonnement zu kündigen."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=VV9ZJ3qRoVY" target="_blank">Abonnement kündigen</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Diese Option ermöglicht es Ihnen, Ihr Abonnement zu kündigen.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class='py-16 bg-gray-50'>
+        <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <!-- Section Statistiken und Einstellungen -->
+            <div class='bg-white rounded-lg shadow-lg overflow-hidden mb-12 card-hover'>
+                <div class='bg-secondary px-6 py-4'>
+                    <h2 class='text-xl font-bold text-white text-left'>Statistiken und Einstellungen</h2>
+                </div>
+                <div class='p-6 space-y-6'>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=xifsi8AXpsQ" target="_blank" class="block w-full h-full">
+                                <img src="images/de/settings.png"
+                                     alt="Diese Option ermöglicht es Ihnen, Ihr Passwort zu ändern oder Ihre Unternehmensinformationen zu aktualisieren, von denen einige in E-Mails erscheinen."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=xifsi8AXpsQ" target="_blank">Kontoeinstellungen</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Diese Option ermöglicht es Ihnen, Ihr Passwort zu ändern oder Ihre Unternehmensinformationen zu aktualisieren, von denen einige in E-Mails erscheinen.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 pb-6 last:border-b-0 last:pb-0 md:h-[302px]">
+                        <div class="w-full md:w-1/3 h-64 md:h-full flex-shrink-0 mb-4 md:mb-0 md:pr-4">
+                            <a href="https://www.youtube.com/watch?v=bFgCwGyeBr4" target="_blank" class="block w-full h-full">
+                                <img src="images/de/stats.png"
+                                     alt="Zeigt Statistiken für Ihre Kandidaten an. Einige Daten können als Excel-Bericht heruntergeladen werden."
+                                     class="w-full h-full object-cover rounded-lg">
+                            </a>
+                        </div>
+                        <div class="w-full md:w-2/3 flex flex-col justify-center">
+                            <h3 class="font-bold text-lg text-primary mb-2">
+                                <a href="https://www.youtube.com/watch?v=bFgCwGyeBr4" target="_blank">Statistiken</a>
+                            </h3>
+                            <p class="text-gray-700 flex-grow">Zeigt Statistiken für Ihre Kandidaten an. Einige Daten können als Excel-Bericht heruntergeladen werden.</p>
+                            <div class="mt-2">
+                                <span class="text-sm text-gray-500">Durée: 5:23</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fußzeile -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="images/logo13.png" width="40" height="40" alt="Logo Smart-Cv-Soft" />
+                        <span class="text-xl font-bold">&nbsp;Smart-Cv-Soft</span>
+                    </div>
+                    <p class="text-gray-400">Das intelligente Werkzeug für Personalvermittlungsagenturen, die ihre Effizienz und Leistung steigern wollen.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition duration-300">Funktionen</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition duration-300">Preise</a></li>
+                        <li><a href="#demo" class="text-gray-400 hover:text-white transition duration-300">Demonstration</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition duration-300">Erfahrungsberichte</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Rechtliches</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Nutzungsbedingungen</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Datenschutzrichtlinie</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Impressum</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">AGB</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Abonnieren Sie, um unsere neuesten Nachrichten und Sonderangebote zu erhalten.</p>
+                    <form id="newsletterForm" class="flex">
+                        <input type="email" placeholder="Ihre E-Mail" class="px-3 py-2 text-gray-800 rounded-l focus:outline-none w-full">
+                        <button type="submit" class="bg-accent px-4 py-2 rounded-r hover:bg-green-600 transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Smart-Cv-Soft. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- ALLGEMEINES SEITENSKRIPT ---
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // --- FORMULARVERWALTUNG ---
+        // (der Rest Ihres Skripts bleibt unverändert)
+    </script>
+</body>
+</html>
